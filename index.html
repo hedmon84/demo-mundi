@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mundiofertas">
+<meta property="og:title" content="Propuesta de rediseño — Mundiofertas">
+<meta property="og:description" content="Rediseño del sitio en tres fases: tienda en línea con Ficopago, integración con SAP y entrega a domicilio. Incluye página de prueba navegable.">
+<meta property="og:image" content="https://www.mundiofertas.net/archivos/multimedia/fondo.png">
+<meta property="og:locale" content="es_HN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#10243F">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta de rediseño — Mundiofertas, S.A.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rojo:#D81F26; --azul:#10243F; --azul-med:#1D4C7C;
+  --ambar:#F5A524; --verde:#1E9E5A;
+  --tinta:#11171E; --gris:#56616E; --linea:#DCE3EA; --sup:#F3F6F9;
+  --sans:"Figtree","Segoe UI",system-ui,sans-serif;
+  --disp:"Archivo","Arial Narrow",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tinta);font-family:var(--sans);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 32px}
+h1,h2,h3,h4{font-family:var(--disp);margin:0;letter-spacing:-.02em;line-height:1.15}
+p{margin:0 0 1em}
+a{color:var(--azul-med)}
+
+/* Portada */
+.cover{background:var(--azul);color:#fff;padding:74px 0 62px;position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-150px;top:-150px;width:480px;height:480px;
+  border:62px solid rgba(216,31,38,.2);border-radius:50%}
+.cover .wrap{position:relative;z-index:1}
+.cover img{height:50px;margin-bottom:30px;display:block}
+.cover .for{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:#8FB3D4;font-weight:700;font-family:var(--disp);margin-bottom:14px}
+.cover h1{font-size:clamp(32px,5vw,52px);font-weight:900;max-width:18ch}
+.cover .lede{margin-top:20px;font-size:18px;color:#C4D8E9;max-width:60ch}
+.cover .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:0 44px;font-size:13.5px;color:#93B6D3}
+.cover .meta b{display:block;color:#fff;font-family:var(--disp);font-size:14.5px;font-weight:700}
+
+section{padding:56px 0}
+section + section{border-top:1px solid var(--linea)}
+.num{font-family:var(--disp);font-weight:800;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--rojo);margin-bottom:11px}
+h2.sec{font-size:clamp(25px,3.4vw,34px);font-weight:800;max-width:22ch}
+.sub{margin-top:13px;color:var(--gris);max-width:66ch;font-size:16.5px}
+h3.h{font-size:19px;font-weight:800;margin-top:34px;margin-bottom:10px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;
+  background:var(--linea);border:1px solid var(--linea);margin-top:30px}
+.c{background:#fff;padding:22px}
+.c b{display:block;font-family:var(--disp);font-size:28px;font-weight:900;color:var(--azul);line-height:1}
+.c span{display:block;margin-top:7px;font-size:14px;color:var(--gris);line-height:1.5}
+
+.callout{background:var(--rojo);color:#fff;padding:34px 38px;border-radius:12px;margin-top:32px}
+.callout h3{font-size:23px;font-weight:900;margin-bottom:10px}
+.callout p{color:#FFD9DA;margin:0;font-size:15.5px;max-width:62ch}
+.callout p + p{margin-top:11px}
+
+.demo{border:2px solid var(--azul);border-radius:12px;padding:30px 34px;margin-top:32px;background:var(--sup)}
+.demo h3{font-size:21px;font-weight:800;color:var(--azul);margin-bottom:8px}
+.demo p{margin:0 0 16px;color:var(--gris);font-size:15.5px}
+.demo .btn{display:inline-block;background:var(--rojo);color:#fff;font-weight:700;
+  padding:13px 26px;border-radius:7px;text-decoration:none;font-size:15px}
+.demo ul{margin:16px 0 0;padding-left:20px;font-size:14.5px;color:var(--gris);line-height:1.9}
+
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--linea);vertical-align:top}
+th{font-family:var(--disp);font-size:11.5px;font-weight:800;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--gris);background:var(--sup)}
+td b{color:var(--azul)}
+
+.fase{border:1px solid var(--linea);border-radius:12px;padding:28px 30px;margin-top:22px}
+.fase .tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);
+  font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:#fff;background:var(--azul);padding:5px 12px;border-radius:4px;margin-bottom:14px}
+.fase.f1 .tag{background:var(--rojo)}
+.fase.f3 .tag{background:var(--azul-med)}
+.fase h3{font-size:22px;font-weight:800;margin-bottom:9px}
+.fase > p{color:var(--gris);margin-bottom:4px;font-size:15.5px}
+.lista{list-style:none;padding:0;margin:16px 0 0}
+.lista li{padding:8px 0 8px 25px;position:relative;font-size:15px;border-top:1px solid var(--linea)}
+.lista li::before{content:"";position:absolute;left:0;top:16px;width:9px;height:9px;
+  border-radius:2px;background:var(--verde)}
+.lista li b{color:var(--azul)}
+
+.pasos{counter-reset:p;list-style:none;padding:0;margin:26px 0 0}
+.pasos li{counter-increment:p;position:relative;padding:0 0 22px 52px;font-size:15.5px}
+.pasos li::before{content:counter(p);position:absolute;left:0;top:0;width:34px;height:34px;
+  border-radius:50%;background:var(--azul);color:#fff;font-family:var(--disp);font-weight:800;
+  font-size:15px;display:flex;align-items:center;justify-content:center}
+.pasos li b{display:block;font-family:var(--disp);font-size:16.5px;font-weight:800;margin-bottom:2px}
+.pasos li span{color:var(--gris)}
+
+.nota{background:#FFF6E6;border-left:3px solid var(--ambar);padding:15px 20px;margin-top:20px;font-size:15px}
+.nota b{color:#8A5B00}
+
+.cierre{background:var(--azul);color:#C4D8E9;padding:48px 0}
+.cierre h2{color:#fff;font-size:27px;font-weight:800;margin-bottom:13px}
+.cierre p{max-width:62ch;font-size:15.5px}
+.firma{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);font-size:14px;color:#8FB3D4}
+.firma b{color:#fff;display:block;font-family:var(--disp);font-size:15.5px}
+
+@media print{
+  body{font-size:12pt}
+  .cover{padding:40px 0}
+  section{padding:26px 0;break-inside:avoid}
+  .fase,.callout,.demo,.cards{break-inside:avoid}
+  .demo .btn{border:1px solid var(--azul)}
+}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <img src="https://www.mundiofertas.net/archivos/img/logo-w.png" alt="Mundiofertas" onerror="this.style.display='none'">
+    <div class="for">Propuesta para Mundiofertas, S.A. · Septiembre 2026</div>
+    <h1>Rediseño del sitio web en tres fases</h1>
+    <p class="lede">Una tienda en línea que aproveche los 37 años de trayectoria y la audiencia que la marca ya construyó, integrada con SAP y con entrega a domicilio.</p>
+    <div class="meta">
+      <div><b>Alcance</b>Diseño, desarrollo, mercadeo e integración</div>
+      <div><b>Fases</b>Rediseño · SAP · Entrega a domicilio</div>
+      <div><b>Incluye</b>Página de prueba navegable</div>
+    </div>
+  </div>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="wrap">
+    <div class="num">01 · Punto de partida</div>
+    <h2 class="sec">Dónde está la oportunidad</h2>
+    <p class="sub">Revisamos el sitio actual sección por sección. La conclusión es buena noticia: el negocio ya tiene todo lo difícil resuelto. Lo que falta es que el sitio esté a la altura de lo que la empresa es.</p>
+
+    <div class="cards">
+      <div class="c"><b>293,497</b><span>Seguidores en Facebook. Una audiencia de ese tamaño es el activo de mercadeo más valioso que tiene la empresa.</span></div>
+      <div class="c"><b>37 años</b><span>Desde 1989, con importación americana desde 1995 y taller propio. Es un respaldo que ningún competidor de precio puede igualar.</span></div>
+      <div class="c"><b>2 tiendas</b><span>San Pedro Sula y Villanueva, con flota y personal técnico. La operación física ya existe y funciona.</span></div>
+    </div>
+
+    <div class="callout">
+      <h3>Hoy el sitio no está capturando nada de eso</h3>
+      <p>El recorrido real del cliente es red social, luego WhatsApp, luego tienda. El sitio queda al margen: el banner principal del inicio lleva directamente a WhatsApp, así que el visitante sale antes de ver un producto. Cada pregunta repetida —cuánto cuesta, qué medidas tiene, lo tienen en Villanueva, es nuevo o usado— la contesta una persona, una por una, todos los días.</p>
+      <p>El rediseño no reemplaza WhatsApp. Hace que WhatsApp reciba conversaciones que ya vienen con el producto elegido y el precio visto, para que el vendedor cierre ventas en lugar de buscar en el catálogo.</p>
+    </div>
+
+    <h3 class="h">Los cuatro puntos que más pesan</h3>
+    <table>
+      <tr><th style="width:34%">Qué encontramos</th><th>Qué significa para la venta</th></tr>
+      <tr><td><b>Los productos nuevos salen sin foto</b></td><td>Los cinco artículos del bloque "Productos Nuevos" cargan una imagen de error en lugar de la fotografía. Son justamente los que se anuncian como novedad.</td></tr>
+      <tr><td><b>El catálogo tiene categorías repetidas</b></td><td>Varias categorías aparecen dos veces con el mismo nombre, y hay productos cargados como si fueran categorías. El cliente se pierde antes de llegar al producto.</td></tr>
+      <tr><td><b>No se dice que los equipos son americanos</b></td><td>El diferenciador más fuerte del negocio solo aparece en un párrafo del pie de página. Arriba del pliegue no hay una sola mención.</td></tr>
+      <tr><td><b>Todo tiene el mismo 20% de descuento</b></td><td>Cuando el descuento es idéntico en todos los productos deja de leerse como oferta y pasa a ser el precio normal.</td></tr>
+    </table>
+    <p style="margin-top:16px;color:var(--gris);font-size:15px">El informe técnico completo, con el detalle de cada sección, se entrega junto con esta propuesta.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="wrap">
+    <div class="num">02 · La propuesta</div>
+    <h2 class="sec">La idea central del rediseño</h2>
+    <p class="sub">Conservamos el logotipo, los colores y la energía de precio que la marca ya tiene. Lo que agregamos es claridad.</p>
+
+    <h3 class="h">Se dice desde el primer momento lo que la empresa vende</h3>
+    <p>Mundiofertas maneja dos líneas: artículos nuevos y electrodomésticos americanos ligeramente usados, revisados en taller propio. El sitio nuevo las señaliza con dos sellos que significan siempre lo mismo en toda la tienda, y muestra la garantía escrita junto al precio. Eso ataca directamente la única razón por la que un cliente duda al comprar un equipo usado.</p>
+
+    <h3 class="h">El negocio pequeño deja de estar escondido</h3>
+    <p>Una vitrina refrigerante cuesta alrededor de L 41,990 y una cama L 3,190. Son diez veces de diferencia y hoy comparten la misma página sin distinción. El sitio nuevo le da entrada propia al cliente de pulpería, comedor y cafetería, con fichas que muestran capacidad, consumo e instalación.</p>
+
+    <h3 class="h">El video que ya se produce empieza a vender</h3>
+    <p>La marca publica contenido en Facebook, Instagram y TikTok todas las semanas. Ese material hoy no toca el sitio. Se incorpora una sección de videos verticales donde cada uno lleva el producto etiquetado con su precio, de modo que el video deja de ser solo contenido y se vuelve entrada al catálogo.</p>
+
+    <h3 class="h">Mercadeo publica sin depender del programador</h3>
+    <p>Banners grandes, videos y pop-ups de promoción quedan con panel propio: se programan con fecha de inicio y fin, se pausan solos y llevan su propio reporte. Si estas herramientas dependen del desarrollador, se dejan de usar a los dos meses.</p>
+
+    <div class="nota"><b>Una recomendación de mercadeo:</b> conviene concentrar el descuento real en pocos productos por semana, con vigencia visible, y dejar el resto a precio normal. Un descuento uniforme en todo el catálogo pierde el efecto justo donde más se necesita.</div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="wrap">
+    <div class="num">03 · Página de prueba</div>
+    <h2 class="sec">Ya pueden verlo funcionando</h2>
+    <p class="sub">Junto con esta propuesta va una página de prueba navegable, armada con los productos y precios reales del catálogo actual.</p>
+
+    <div class="demo">
+      <h3>Abrir la página de prueba</h3>
+      <p>Se abre en cualquier navegador, computadora o celular. No es la tienda en producción: es una demostración para que puedan recorrerla, opinar y pedir ajustes antes de que se escriba una sola línea del sitio real.</p>
+      <a class="btn" href="demo.html" target="_blank" rel="noopener">Ver la página de prueba →</a>
+      <ul>
+        <li>Agregar productos al carrito y ver el total actualizarse</li>
+        <li>Entrar a la ficha de un producto con garantía, cuota, disponibilidad y ficha técnica</li>
+        <li>Ver los sellos de nuevo y americano revisado funcionando en todo el catálogo</li>
+        <li>Probar los banners grandes, la sección de video y el pop-up de promoción</li>
+        <li>Recorrer la compra completa: carrito, zona de entrega, datos y pago con Ficopago</li>
+        <li>Probar qué pasa cuando el municipio del cliente todavía no está habilitado</li>
+        <li>Abrirla en el celular para ver el menú y el diseño en pantalla pequeña</li>
+      </ul>
+    </div>
+
+    <div class="nota"><b>Cómo leerla:</b> es una maqueta de diseño, así que los botones de WhatsApp y de búsqueda muestran un aviso en lugar de ejecutar la acción real. El objetivo es validar la estructura, los textos y la presentación de los productos.</div>
+  </div>
+</section>
+
+<!-- 3b -->
+<section>
+  <div class="wrap">
+    <div class="num">04 · Pago en línea</div>
+    <h2 class="sec">Cobro con Ficopago</h2>
+    <p class="sub">La tienda cobra con tarjeta a través de Ficopago, la plataforma de pagos en línea de Banco Ficohsa. El cliente termina su compra sin salir a WhatsApp y el dinero entra a la cuenta de la empresa.</p>
+
+    <h3 class="h">Cómo funciona para el cliente</h3>
+    <p>Arma su carrito, elige cómo recibe el pedido, deja sus datos y pasa al pago. Al elegir tarjeta, sale del sitio de Mundiofertas y digita los datos directamente en el formulario seguro de Ficopago, con la verificación 3-D Secure de su propio banco. Cuando el pago se aprueba, regresa al sitio con su número de pedido y recibe la confirmación por WhatsApp y correo.</p>
+
+    <div class="nota"><b>Un punto importante de seguridad:</b> el sitio de Mundiofertas nunca recibe ni guarda los datos de la tarjeta. Viajan cifrados directo a Ficopago. Eso protege al cliente, protege a la empresa ante reclamos, y evita que el sitio tenga que cumplir con las certificaciones que exige almacenar tarjetas.</p></div>
+
+    <h3 class="h">Qué se implementa</h3>
+    <table>
+      <tr><th style="width:34%">Elemento</th><th>Detalle</th></tr>
+      <tr><td><b>Pago con tarjeta</b></td><td>Visa, Mastercard, Diners, Discover y JCB, las mismas que ya aparecen en el pie del sitio actual.</td></tr>
+      <tr><td><b>Confirmación automática</b></td><td>Ficopago avisa al sitio cuando el pago se aprueba o se rechaza. El pedido no se confirma hasta que el cobro esté aprobado.</td></tr>
+      <tr><td><b>Pedido rechazado</b></td><td>El cliente ve un mensaje claro con qué hacer, y el carrito queda intacto para reintentar.</td></tr>
+      <tr><td><b>Conciliación</b></td><td>Cada pedido guarda el número de transacción de Ficopago, para cruzarlo contra el estado de cuenta sin buscar a mano.</td></tr>
+      <tr><td><b>Devoluciones</b></td><td>Registro del reverso cuando se anula una venta, vinculado al pedido original.</td></tr>
+      <tr><td><b>Otras formas de pago</b></td><td>Se mantienen pago en tienda al retirar y pago contra entrega en zonas con flota propia. No todo el mercado paga con tarjeta.</td></tr>
+    </table>
+
+    <div class="nota"><b>Lo que necesitamos de Ficohsa:</b> las credenciales de comercio, el acceso al ambiente de pruebas y la documentación técnica de integración. Recomendamos iniciar ese trámite apenas se apruebe la propuesta, porque el tiempo de afiliación depende del banco y no de nosotros.</div>
+  </div>
+</section>
+
+<!-- 3c -->
+<section>
+  <div class="wrap">
+    <div class="num">05 · Entrega a domicilio</div>
+    <h2 class="sec">Envíos solo donde ustedes decidan</h2>
+    <p class="sub">El sitio no promete entregas que la operación no pueda cumplir. Se habilitan sectores uno por uno, cada uno con su tarifa y su tiempo de entrega, y ustedes los activan o desactivan cuando quieran.</p>
+
+    <h3 class="h">Cómo lo ve el cliente</h3>
+    <p>Al momento de elegir la entrega selecciona su municipio. Si está habilitado, el sitio le muestra de una vez cuánto cuesta el envío y en cuántos días llega. Si no lo está, en lugar de un error recibe dos alternativas: retirar en tienda o escribir por WhatsApp para cotizar con transporte externo. Así ninguna visita se pierde por una zona que todavía no cubren.</p>
+
+    <h3 class="h">Propuesta de arranque</h3>
+    <p>Estos sectores son una propuesta para discutir con el equipo de despacho. Las tarifas y los tiempos los definen ustedes según la ruta real.</p>
+    <table>
+      <tr><th style="width:34%">Sector</th><th style="width:22%">Tarifa</th><th>Entrega</th></tr>
+      <tr><td><b>San Pedro Sula y Villanueva</b></td><td>L 250</td><td>24 a 48 horas · envío gratis arriba de L 15,000</td></tr>
+      <tr><td><b>Choloma y La Lima</b></td><td>L 300</td><td>24 a 48 horas · envío gratis arriba de L 18,000</td></tr>
+      <tr><td><b>El Progreso</b></td><td>L 400</td><td>2 a 3 días</td></tr>
+      <tr><td><b>Puerto Cortés</b></td><td>L 500</td><td>2 a 3 días</td></tr>
+      <tr><td><b>Santa Bárbara, Yoro, La Ceiba</b></td><td>L 700 a L 900</td><td>3 a 5 días</td></tr>
+      <tr><td><b>Tegucigalpa</b></td><td>L 950</td><td>3 a 5 días</td></tr>
+      <tr><td><b>Resto del país</b></td><td>Por cotizar</td><td>Retiro en tienda o coordinación por WhatsApp</td></tr>
+    </table>
+
+    <h3 class="h">Lo que se agrega junto con el envío</h3>
+    <ul class="lista">
+      <li><b>Instalación y armado</b> como servicio opcional que el cliente agrega en el mismo paso, cobrado dentro del pedido.</li>
+      <li><b>Envío gratis por monto</b> configurable por sector. Es la forma más simple de subir el ticket promedio.</li>
+      <li><b>Agenda de entrega</b> por día y franja horaria, limitada por la capacidad diaria de la flota.</li>
+      <li><b>Seguimiento del pedido</b> con avisos por WhatsApp en cada cambio de estado.</li>
+      <li><b>Vista de ruta interna</b> con las entregas del día agrupadas por sector, para el equipo de despacho.</li>
+      <li><b>Recogida del equipo usado</b> del cliente como descuento del pedido, que además alimenta la línea americana.</li>
+    </ul>
+    <div class="nota"><b>Recomendación:</b> arrancar solo con San Pedro Sula, Villanueva, Choloma y La Lima. Es donde la flota ya opera todos los días y el riesgo de incumplir es mínimo. Los demás sectores se van encendiendo desde el panel cuando la operación esté lista, sin tocar el sitio.</div>
+  </div>
+</section>
+
+<!-- 3d -->
+<section>
+  <div class="wrap">
+    <div class="num">06 · Panel de administración</div>
+    <h2 class="sec">Un CMS propio para manejar todo el sitio</h2>
+    <p class="sub">Junto con el rediseño se construye el panel desde donde ustedes cargan productos y editan el contenido de la página, sin depender del programador para cada cambio.</p>
+
+    <h3 class="h">Qué se puede administrar</h3>
+    <table>
+      <tr><th style="width:30%">Módulo</th><th>Qué permite hacer</th></tr>
+      <tr><td><b>Productos</b></td><td>Alta, edición y baja. Fotos múltiples, condición nuevo o americano revisado, garantía, precio, precio de oferta con vigencia, existencia por tienda, ficha técnica y video asociado.</td></tr>
+      <tr><td><b>Categorías</b></td><td>Crear, ordenar, renombrar y reasignar productos. Con aviso cuando se intenta crear una categoría duplicada, que es el problema del sitio actual.</td></tr>
+      <tr><td><b>Ofertas</b></td><td>Marcar los productos de la semana con fecha de inicio y fin. Se encienden y se apagan solos.</td></tr>
+      <tr><td><b>Banners</b></td><td>Los tres espacios del inicio: arte de computadora y celular, título, texto, botón, destino y vigencia.</td></tr>
+      <tr><td><b>Videos y reels</b></td><td>Subir el video, elegir la portada y etiquetar los productos que aparecen en él.</td></tr>
+      <tr><td><b>Pop-ups</b></td><td>Crear campañas con disparador, segmento, páginas donde aparece, frecuencia y vigencia, con su reporte de resultados.</td></tr>
+      <tr><td><b>Zonas de entrega</b></td><td>Activar o desactivar sectores, cambiar tarifas, tiempos de entrega y el monto de envío gratis.</td></tr>
+      <tr><td><b>Pedidos</b></td><td>Ver, filtrar, cambiar estado, imprimir la hoja de despacho y consultar la transacción de Ficopago asociada.</td></tr>
+      <tr><td><b>Contenido del inicio</b></td><td>Texto del bloque principal, franja de garantías, sección de nuevo y americano revisado, y orden de los bloques.</td></tr>
+      <tr><td><b>Tiendas</b></td><td>Direcciones, horarios, teléfonos y enlaces de mapa de ambos locales.</td></tr>
+      <tr><td><b>Páginas de texto</b></td><td>Políticas de envío, garantías, preguntas frecuentes y sobre nosotros.</td></tr>
+      <tr><td><b>Marcas y cupones</b></td><td>Logos de marca y códigos de descuento con monto mínimo y vigencia.</td></tr>
+      <tr><td><b>Usuarios y permisos</b></td><td>Cada quien ve solo lo suyo: mercadeo maneja banners y campañas, bodega maneja existencias y pedidos, gerencia ve reportes.</td></tr>
+    </table>
+
+    <div class="nota"><b>Una decisión de diseño que ahorra trabajo después:</b> el panel se construye sabiendo que en la Fase 2 llega SAP. Cuando eso pase, productos, precios y existencias pasan a ser solo de lectura en el panel, porque los administra SAP, mientras que banners, videos, campañas, zonas de entrega y textos siguen editándose desde aquí. Dejarlo previsto desde ahora evita rehacer el panel cuando se integre.</div>
+
+    <h3 class="h">Capacitación y entrega</h3>
+    <p>Se incluye una sesión de capacitación con el equipo que va a usarlo y un manual corto en español con las tareas más frecuentes: cargar un producto, publicar una oferta, cambiar un banner y activar una zona de entrega.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="wrap">
+    <div class="num">07 · Plan de trabajo</div>
+    <h2 class="sec">Tres fases, cada una útil por sí sola</h2>
+    <p class="sub">Cada fase deja el sitio funcionando en producción. Ninguna depende de que la siguiente se apruebe, así que pueden evaluar resultados antes de avanzar.</p>
+
+    <div class="fase f1">
+      <span class="tag">Fase 1 · Rediseño y mercadeo</span>
+      <h3>El sitio vende mejor con lo que ya existe hoy</h3>
+      <p>Sin tocar sistemas internos. Además deja ordenado el catálogo, que es el requisito para poder conectar SAP después.</p>
+      <ul class="lista">
+        <li><b>Diseño completo</b> de inicio, categorías con filtros, búsqueda, ficha de producto, carrito y contacto, más dos páginas nuevas: Americanos revisados y Para tu negocio.</li>
+        <li><b>Catálogo ordenado:</b> categorías sin duplicados, títulos limpios, marca y código separados, y regla que impide publicar un producto sin fotografía.</li>
+        <li><b>Sellos de condición y garantía</b> aplicados a todo el catálogo.</li>
+        <li><b>Banners grandes administrables</b> con arte para computadora y celular, enlace y vigencia por fecha.</li>
+        <li><b>Sección de videos y reels</b> con el producto y el precio etiquetados.</li>
+        <li><b>Módulo de pop-ups</b> con panel de campañas, control de frecuencia y reporte propio.</li>
+        <li><b>WhatsApp con contexto:</b> cada botón envía el mensaje ya escrito con producto, código y precio.</li>
+        <li><b>Velocidad y accesibilidad:</b> imágenes optimizadas, zoom habilitado en celular, sitio navegable para todos.</li>
+        <li><b>Panel de administración propio (CMS)</b> para cargar productos y editar el contenido del sitio, con usuarios y permisos por área.</li>
+        <li><b>Carrito y proceso de compra completo</b> con cobro por Ficopago, y las zonas de entrega habilitadas administrables desde el panel.</li>
+        <li><b>Medición:</b> Google Analytics configurado para comercio electrónico, con tablero para gerencia.</li>
+      </ul>
+    </div>
+
+    <div class="fase">
+      <span class="tag">Fase 2 · Integración con SAP</span>
+      <h3>Un solo dato para la tienda y para el sitio</h3>
+      <p>Hoy el catálogo, los precios y las existencias se mantienen a mano, y el sitio puede decir algo distinto de lo que dice el sistema. SAP pasa a ser la fuente única.</p>
+      <ul class="lista">
+        <li><b>Catálogo, precios y existencias</b> sincronizados automáticamente desde SAP.</li>
+        <li><b>Disponibilidad por tienda</b> visible en cada producto, alimentada desde los almacenes.</li>
+        <li><b>Pedidos del sitio</b> creados directamente en SAP, sin que nadie los transcriba.</li>
+        <li><b>Estado del pedido y facturación</b> visibles para el cliente en su cuenta.</li>
+        <li><b>Respaldo ante fallas:</b> si SAP no responde, el sitio sigue navegable y el pedido queda en cola.</li>
+      </ul>
+      <div class="nota"><b>Punto a confirmar antes de cotizar esta fase:</b> el sitio actual corre sobre una plataforma desarrollada a la medida por la agencia que lo mantiene. Necesitamos saber si permite conexión con sistemas externos. Si no la permite, esta fase implica migrar de plataforma, y conviene decidirlo antes de empezar la Fase 1.</div>
+    </div>
+
+    <div class="fase f3">
+      <span class="tag">Fase 3 · Entrega y mejoras</span>
+      <h3>El cliente elige cómo y cuándo recibe</h3>
+      <p>Con el inventario ya confiable por tienda, la entrega deja de ser una promesa genérica y pasa a tener costo y fecha desde el sitio.</p>
+      <ul class="lista">
+        <li><b>Retiro en tienda</b> con aviso cuando el pedido está listo.</li>
+        <li><b>Envío por zona</b> con tarifas por municipio y umbral de envío gratis.</li>
+        <li><b>Agenda de entrega</b> por día y franja horaria, según la capacidad de la flota.</li>
+        <li><b>Instalación y armado</b> cobrados como servicio adicional del pedido.</li>
+        <li><b>Recogida del equipo usado</b> del cliente, que además alimenta la línea americana.</li>
+        <li><b>Seguimiento</b> del pedido por WhatsApp o correo, y vista de ruta para el equipo de despacho.</li>
+      </ul>
+      <p style="margin-top:16px;font-size:15px">En esta fase también entran las mejoras que el negocio priorice. Las que recomendamos evaluar primero: mostrar la cuota mensual junto al precio, habilitar pago en línea, y activar reseñas de clientes en la línea americana revisada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="wrap">
+    <div class="num">08 · Qué necesitamos</div>
+    <h2 class="sec">Lo que pedimos de su lado</h2>
+    <p class="sub">Con estas respuestas podemos cerrar tiempos e inversión de cada fase.</p>
+    <table>
+      <tr><th style="width:46%">Qué necesitamos saber</th><th>Para qué</th></tr>
+      <tr><td><b>Si la plataforma actual permite conexión externa</b></td><td>Define si la Fase 2 es una integración o una migración. Es lo único que no se puede posponer.</td></tr>
+      <tr><td><b>Qué versión de SAP utilizan</b></td><td>Business One y S/4HANA tienen caminos de integración distintos.</td></tr>
+      <tr><td><b>Si SAP maneja almacenes separados por tienda</b></td><td>De eso depende mostrar disponibilidad por local.</td></tr>
+      <tr><td><b>Manual de marca con los códigos de color exactos</b></td><td>Para ajustar la paleta a los valores oficiales.</td></tr>
+      <tr><td><b>Cuántas consultas de WhatsApp entran por día</b></td><td>Es el número con el que mediremos el resultado de la Fase 1.</td></tr>
+      <tr><td><b>Si existe financiamiento propio o con terceros</b></td><td>Si existe, la cuota mensual entra desde la Fase 1.</td></tr>
+      <tr><td><b>Estado de la afiliación con Ficohsa</b></td><td>Necesitamos credenciales de comercio y acceso al ambiente de pruebas de Ficopago. El tiempo de afiliación lo define el banco.</td></tr>
+      <tr><td><b>Capacidad diaria de entregas y cobertura de la flota</b></td><td>Define qué sectores se habilitan primero y con qué tarifa.</td></tr>
+      <tr><td><b>Quién va a administrar el sitio día a día</b></td><td>Para definir los perfiles de usuario del panel y a quién capacitamos.</td></tr>
+      <tr><td><b>Quién produce el video y con qué frecuencia</b></td><td>Determina si la sección de videos se alimenta con lo que ya existe.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 6 -->
+<section>
+  <div class="wrap">
+    <div class="num">09 · Siguientes pasos</div>
+    <h2 class="sec">Cómo arrancamos</h2>
+    <ol class="pasos">
+      <li><b>Revisan la página de prueba</b><span>Con el equipo de ventas y mercadeo. Nos interesa especialmente la opinión de quienes atienden WhatsApp todos los días: son los que saben qué pregunta la gente.</span></li>
+      <li><b>Reunión de una hora</b><span>Recorremos la propuesta, anotamos ajustes y respondemos las preguntas del punto anterior.</span></li>
+      <li><b>Cerramos alcance e inversión de la Fase 1</b><span>Con los ajustes ya incorporados, entregamos cronograma y propuesta económica en firme.</span></li>
+      <li><b>Semana uno del proyecto</b><span>Levantamos la línea base de medición antes de cambiar nada, para que el resultado se pueda demostrar con números propios.</span></li>
+    </ol>
+  </div>
+</section>
+
+<div class="cierre">
+  <div class="wrap">
+    <h2>Una última cosa</h2>
+    <p>La mayor parte del trabajo de la Fase 1 no es programación: es poner en orden el catálogo y decir con claridad lo que la empresa ya hace bien desde 1989. Ese orden es también lo que hace posible conectar SAP después sin rehacer nada.</p>
+    <p>Quedamos atentos a sus comentarios sobre la página de prueba.</p>
+    <div class="firma">
+      <b>Contacto</b>
+      Nombre · Cargo<br>
+      Correo · Teléfono
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
