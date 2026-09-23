@@ -46,3 +46,10 @@ Para revisar localmente: `python3 -m http.server 8765` y abrir `http://localhost
 La historia se basa en https://www.mundiofertas.net/Sobre-Nosotros/ (1989, 1995, 2015 y actualidad). El mapa usa Leaflet 1.9.4, incluido con su licencia en `assets/leaflet/`, y mosaicos de OpenStreetMap con atribución visible. Requiere conexión para cargar los mosaicos; los enlaces de las tiendas permanecen disponibles.
 
 San Pedro Sula usa las coordenadas del enlace oficial. Villanueva y Choloma tienen marcadores aproximados señalados como demo; las direcciones de las tres tarjetas siguen la referencia proporcionada. Los enlaces de Villanueva y San Pedro Sula son los del sitio oficial; Choloma abre una búsqueda en Google Maps. Confirmar sus coordenadas antes de usar el mapa como localizador definitivo.
+
+## Navegación y presentación
+
+- `historia.html` presenta la historia, trayectoria, misión y valores en una página independiente; sus enlaces desde la demo abren una pestaña nueva.
+- Categorías: 11 grupos y 40 subcategorías tomados del menú oficial el 23/09/2026. `assets/categories.json` conserva nombres y URLs de origen, incluidos nombres repetidos con destinos distintos. Los enlaces abren la tienda oficial en otra pestaña. Menús desplegables disponibles en escritorio, móvil y la sección de categorías.
+- Carrusel principal: avance cada 6 segundos, pausa/reanudación, pausa al interactuar o pasar el cursor; respeta movimiento reducido y no avanza cuando está fuera de pantalla o la pestaña está oculta.
+- Logos de marcas ampliados, a color, con adaptación a celular.
