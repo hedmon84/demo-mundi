@@ -40,3 +40,9 @@ Arrastrar esta carpeta a [app.netlify.com/drop](https://app.netlify.com/drop). D
 La tienda de demostración está en `demo.html`. Su portada usa el logo local en `assets/logo.png`, estilos en `assets/storefront.css` y carruseles en `assets/storefront.js`. Conservar esa carpeta al publicar. Los carruseles admiten flechas, teclado y desplazamiento táctil, sin rotación automática.
 
 Para revisar localmente: `python3 -m http.server 8765` y abrir `http://localhost:8765/demo.html`.
+
+## Historia y ubicaciones
+
+La historia se basa en https://www.mundiofertas.net/Sobre-Nosotros/ (1989, 1995, 2015 y actualidad). El mapa usa Leaflet 1.9.4, incluido con su licencia en `assets/leaflet/`, y mosaicos de OpenStreetMap con atribución visible. Requiere conexión para cargar los mosaicos; los enlaces de las tiendas permanecen disponibles.
+
+San Pedro Sula usa las coordenadas del enlace oficial. Villanueva y Choloma tienen marcadores aproximados señalados como demo; las direcciones de las tres tarjetas siguen la referencia proporcionada. Los enlaces de Villanueva y San Pedro Sula son los del sitio oficial; Choloma abre una búsqueda en Google Maps. Confirmar sus coordenadas antes de usar el mapa como localizador definitivo.

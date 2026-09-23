@@ -457,6 +457,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 @media(prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
 </style>
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
 <link rel="stylesheet" href="assets/storefront.css">
 </head>
 <body>
@@ -465,7 +466,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 <div class="util"><div class="in">
   <span><strong>2 tiendas:</strong> San Pedro Sula · Villanueva</span>
-  <span class="u3">Artículos americanos desde 1989 · Envío a todo Honduras</span>
+  <span class="u3">Con vos desde 1989 · Envío a todo Honduras</span>
   <span><strong>WhatsApp +504 3267-7622</strong></span>
 </div></div>
 
@@ -496,7 +497,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
     <a href="#categorias">Mueblería</a>
     <a href="#categorias">Camas</a>
     <a href="#negocio">Para tu negocio</a>
-    <a href="#pie">Contáctenos</a>
+    <a href="#ubicaciones">Tiendas</a><a href="#historia">Historia</a>
   </div></nav>
 </header>
 
@@ -515,7 +516,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
     <h4>Negocio</h4>
     <a href="#negocio">Equipar mi negocio</a>
     <h4>Ayuda</h4>
-    <a href="#pie">Nuestras tiendas</a>
+    <a href="#ubicaciones">Nuestras tiendas</a><a href="#historia">Nuestra historia</a>
     <a href="#pie">Garantías y envíos</a>
   </div>
 </div>
@@ -636,6 +637,29 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
   </div>
 </div></section>
 
+
+<section class="company-history" id="historia" aria-labelledby="history-title"><div class="in">
+  <div class="section-heading"><span class="eyebrow">CRECIENDO JUNTO A VOS</span><h2 id="history-title">Nuestra historia, tu confianza.</h2><p>Desde una tienda de electrodomésticos usados hasta un mundo de opciones para tu hogar.</p></div>
+  <ol class="history-timeline">
+    <li><span class="history-year">1989</span><div class="history-dot" aria-hidden="true"></div><h3>Así comenzamos</h3><p>Abrimos nuestras puertas como una tienda dedicada a la venta de electrodomésticos usados.</p></li>
+    <li><span class="history-year">1995</span><div class="history-dot" aria-hidden="true"></div><h3>Una nueva oportunidad</h3><p>Iniciamos la importación de electrodomésticos americanos ligeramente usados, con un equipo de tres personas.</p></li>
+    <li><span class="history-year">2015</span><div class="history-dot" aria-hidden="true"></div><h3>Crecemos en Honduras</h3><p>Consolidamos nuestra distribución de artículos americanos, con marcas como Whirlpool, Kenmore y Frigidaire.</p></li>
+    <li><span class="history-year">Hoy</span><div class="history-dot" aria-hidden="true"></div><h3>Más para tu hogar</h3><p>Combinamos línea americana y artículos nuevos: refrigeración, estufas, muebles y equipos para negocios.</p></li>
+  </ol>
+  <div class="history-note"><span>Una historia de trabajo, servicio y compromiso con nuestros clientes.</span><a href="https://www.mundiofertas.net/Sobre-Nosotros/" target="_blank" rel="noopener noreferrer">Conocé nuestra historia ↗</a></div>
+</div></section>
+<section class="store-locations" id="ubicaciones" aria-labelledby="locations-title"><div class="in">
+  <div class="section-heading"><span class="eyebrow">SIEMPRE CERCA DE VOS</span><h2 id="locations-title">¿Dónde estamos?</h2><p>Visitá Mundi Ofertas y encontrá lo que tu hogar necesita.</p></div>
+  <div class="locations-layout">
+    <div class="map-panel"><div id="storeMap" role="region" aria-label="Mapa de tiendas Mundi Ofertas en Cortés"><p class="map-fallback">Cargando mapa… También podés usar los enlaces de cada tienda.</p></div><div class="map-caption"><span class="demo-map-label">MAPA DEMO</span><span>Villanueva y Choloma: puntos de referencia aproximados.</span></div></div>
+    <div class="location-cards">
+      <article class="location-card"><span class="location-icon" aria-hidden="true">⌖</span><div><button class="store-focus" data-store="villanueva">Villanueva</button><p>Sobre el boulevard principal de la CA-5, a la par de Popeyes y Autorepuestos.</p><a href="https://maps.app.goo.gl/5xutEbXc8fwufgaG9?g_st=aw" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a></div></article>
+      <article class="location-card"><span class="location-icon" aria-hidden="true">⌖</span><div><button class="store-focus" data-store="sps">San Pedro Sula</button><p>Bo. El Benque, 7 calle y 8 avenida, a una cuadra del Hospital Leonardo Martínez.</p><a href="https://goo.gl/maps/nLYeeZ4ikxT9iuoH6" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a></div></article>
+      <article class="location-card"><span class="location-icon" aria-hidden="true">⌖</span><div><button class="store-focus" data-store="choloma">Choloma</button><p>Boulevard hacia Puerto Cortés, atrás de Popeyes.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Mundiofertas+Choloma+Honduras" target="_blank" rel="noopener noreferrer">Buscar ubicación ↗</a></div></article>
+    </div>
+  </div>
+</div></section>
+
 </main>
 
 <!-- ============ VISTA: FICHA DE PRODUCTO ============ -->
@@ -693,13 +717,13 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <footer class="site" id="pie"><div class="in">
   <div>
     <img class="flogo" src="assets/logo.png" alt="Mundiofertas" onerror="this.style.display='none'">
-    <p style="margin:0">Desde 1989 importando electrodomésticos americanos ligeramente usados y vendiendo línea nueva, con taller propio, garantía escrita y precios justos.</p>
+    <p style="margin:0">Desde 1989 acompañando a los hogares hondureños con electrodomésticos. Importación americana desde 1995 y línea nueva, con taller propio, garantía escrita y precios justos.</p>
     <div class="pays"><i></i><i></i><i></i><i></i><i></i></div>
   </div>
   <div>
     <h5>Tiendas</h5>
-    <div class="store"><b>San Pedro Sula</b>Bo. El Benque, 7 calle 8 avenida<br><a href="#">Cómo llegar</a></div>
-    <div class="store"><b>Villanueva</b>Bulevar CA-5, a la par de Popeyes<br><a href="#">Cómo llegar</a></div>
+    <div class="store"><b>San Pedro Sula</b>Bo. El Benque, 7 calle 8 avenida<br><a href="#ubicaciones">Cómo llegar</a></div>
+    <div class="store"><b>Villanueva</b>Bulevar CA-5, a la par de Popeyes<br><a href="#ubicaciones">Cómo llegar</a></div>
   </div>
   <div><h5>Comprar</h5>
     <ul><li><a href="#ofertas">Ofertas</a></li><li><a href="#americanos">Americanos revisados</a></li>
@@ -1257,5 +1281,7 @@ document.querySelectorAll(".hact a").forEach(a => {
 });
 </script>
 <script src="assets/storefront.js"></script>
+<script src="assets/leaflet/leaflet.js"></script>
+<script src="assets/locations.js"></script>
 </body>
 </html>
