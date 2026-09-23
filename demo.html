@@ -6,10 +6,10 @@
 <meta property="og:site_name" content="Mundiofertas">
 <meta property="og:title" content="Mundiofertas — Página de prueba">
 <meta property="og:description" content="Demostración navegable del sitio rediseñado: catálogo, ficha de producto, carrito y compra con Ficopago.">
-<meta property="og:image" content="https://www.mundiofertas.net/archivos/multimedia/fondo.png">
+<meta property="og:image" content="assets/logo.png">
 <meta property="og:locale" content="es_HN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#10243F">
+<meta name="theme-color" content="#124E78">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mundiofertas — Página de prueba</title>
@@ -19,20 +19,19 @@
 <style>
 /* =====================================================================
    MUNDIOFERTAS — PÁGINA DE PRUEBA
-   Paleta de marca: los seis valores de abajo son el único lugar
-   donde se definen los colores. Cambiarlos actualiza todo el sitio.
+   Paleta de marca: azul claro, azul de contraste y blanco.
    ===================================================================== */
 :root{
-  --rojo:#D81F26;
-  --rojo-osc:#A5161C;
-  --azul:#10243F;
-  --azul-med:#1D4C7C;
-  --ambar:#F5A524;
-  --verde:#1E9E5A;
+  --primario:#087AAF;
+  --primario-hover:#08618D;
+  --azul:#124E78;
+  --azul-med:#176D9E;
+  --ambar:#DDF3FF;
+  --verde:#087AAF;
   --tinta:#11171E;
   --gris:#5A6572;
   --linea:#DCE3EA;
-  --sup:#F1F4F8;
+  --sup:#F2F9FD;
   --sans:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
   --disp:"Archivo","Arial Narrow",system-ui,sans-serif;
   --r:9px;
@@ -50,7 +49,7 @@ h1,h2,h3,h4{font-family:var(--disp);margin:0;letter-spacing:-.02em;line-height:1
 .hide{display:none !important}
 
 /* ---------- Aviso de demo ---------- */
-.demobar{background:var(--ambar);color:#3D2600;text-align:center;padding:7px 16px;
+.demobar{background:var(--ambar);color:#124E78;text-align:center;padding:7px 16px;
   font-size:12.5px;font-weight:600}
 
 /* ---------- Barra de utilidad ---------- */
@@ -66,14 +65,14 @@ header.site{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px s
 .logo{display:flex;align-items:center;flex:0 0 auto}
 .logo img{height:46px;width:auto;object-fit:contain;display:block}
 .logo .fb{font-family:var(--disp);font-weight:900;font-size:23px;letter-spacing:-.03em;color:var(--azul);white-space:nowrap}
-.logo .fb i{color:var(--rojo);font-style:normal}
+.logo .fb i{color:var(--primario);font-style:normal}
 .searchbox{flex:1;display:flex;border:2px solid var(--azul);border-radius:7px;overflow:hidden;min-width:0}
 .searchbox input{flex:1;border:0;padding:11px 14px;font:inherit;font-size:14px;outline:0;min-width:0}
 .searchbox button{border:0;background:var(--azul);color:#fff;font-weight:600;padding:0 20px;cursor:pointer;font-size:14px}
 .hact{display:flex;gap:18px;align-items:center;white-space:nowrap}
 .hact a{display:flex;flex-direction:column;font-size:11.5px;color:var(--gris);position:relative}
 .hact a b{color:var(--tinta);font-size:13px;font-weight:600}
-.cartnum{position:absolute;top:-5px;right:-12px;background:var(--rojo);color:#fff;
+.cartnum{position:absolute;top:-5px;right:-12px;background:var(--primario);color:#fff;
   border-radius:11px;min-width:19px;height:19px;font-size:11px;font-weight:700;
   display:flex;align-items:center;justify-content:center;padding:0 5px}
 .burger{display:none;border:1px solid var(--linea);background:#fff;border-radius:7px;
@@ -92,9 +91,9 @@ nav.main .in{display:flex;gap:22px;align-items:center;font-size:13.5px;font-weig
   padding-top:11px;padding-bottom:11px;overflow-x:auto;scrollbar-width:none}
 nav.main .in::-webkit-scrollbar{display:none}
 nav.main a{white-space:nowrap}
-nav.main a.all{background:var(--rojo);color:#fff;padding:8px 15px;border-radius:6px}
-nav.main a.of{color:var(--rojo)}
-nav.main a:hover{color:var(--rojo)}
+nav.main a.all{background:var(--primario);color:#fff;padding:8px 15px;border-radius:6px}
+nav.main a.of{color:var(--primario)}
+nav.main a:hover{color:var(--primario)}
 @media(max-width:860px){nav.main{display:none}}
 
 /* menú móvil */
@@ -113,7 +112,7 @@ nav.main a:hover{color:var(--rojo)}
   display:flex;gap:22px;align-items:center;min-height:310px}
 @media(max-width:560px){.deal{flex-direction:column-reverse;padding:26px 22px;min-height:0}}
 .deal .txt{flex:1.15}
-.tag{display:inline-block;background:var(--rojo);font-family:var(--disp);font-weight:800;
+.tag{display:inline-block;background:var(--primario);font-family:var(--disp);font-weight:800;
   font-size:11.5px;letter-spacing:.1em;padding:5px 11px;border-radius:3px;margin-bottom:13px}
 .deal h2{font-size:clamp(22px,3vw,29px);font-weight:800;margin-bottom:6px}
 .deal .bl{color:#93B5D2;font-size:13px;margin-bottom:16px}
@@ -121,12 +120,12 @@ nav.main a:hover{color:var(--rojo)}
 .pricebig .now{font-family:var(--disp);font-weight:900;font-size:clamp(32px,5vw,44px);
   letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
 .pricebig .was{color:#87A8C4;text-decoration:line-through;font-size:16px}
-.save{display:inline-block;margin-top:12px;background:rgba(30,158,90,.18);color:#7FE3AC;
-  border:1px solid rgba(30,158,90,.5);border-radius:4px;padding:5px 11px;font-size:13px;font-weight:600}
+.save{display:inline-block;margin-top:12px;background:rgba(8,122,175,.18);color:#7FE3AC;
+  border:1px solid rgba(8,122,175,.5);border-radius:4px;padding:5px 11px;font-size:13px;font-weight:600}
 .cta{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
 .btn{border:0;border-radius:7px;padding:12px 22px;font-weight:700;font-size:14px;cursor:pointer;display:inline-block}
-.btn.p{background:var(--rojo);color:#fff}
-.btn.p:hover{background:var(--rojo-osc)}
+.btn.p{background:var(--primario);color:#fff}
+.btn.p:hover{background:var(--primario-hover)}
 .btn.g{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
 .btn.wa{background:var(--verde);color:#fff}
 .btn.blue{background:var(--azul);color:#fff}
@@ -162,7 +161,7 @@ nav.main a:hover{color:var(--rojo)}
 .bhead{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:20px;flex-wrap:wrap}
 .bhead h3{font-size:clamp(20px,2.6vw,25px);font-weight:800}
 .bhead p{margin:5px 0 0;color:var(--gris);font-size:13.5px}
-.bhead a{color:var(--rojo);font-weight:700;font-size:13.5px}
+.bhead a{color:var(--primario);font-weight:700;font-size:13.5px}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 @media(max-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
@@ -180,10 +179,10 @@ nav.main a:hover{color:var(--rojo)}
 .badge{position:absolute;top:9px;left:9px;z-index:3;font-family:var(--disp);font-weight:800;
   font-size:10px;letter-spacing:.06em;padding:4px 8px;border-radius:3px;text-transform:uppercase}
 .badge.nuevo{background:var(--azul);color:#fff}
-.badge.semi{background:var(--ambar);color:#3D2600}
+.badge.semi{background:var(--ambar);color:#124E78}
 .fav{position:absolute;top:8px;right:8px;z-index:3;width:30px;height:30px;border-radius:50%;
   border:1px solid var(--linea);background:#fff;cursor:pointer;font-size:14px;line-height:1;color:var(--gris)}
-.fav.on{color:var(--rojo);border-color:var(--rojo)}
+.fav.on{color:var(--primario);border-color:var(--primario)}
 .cbody{padding:13px 14px 15px;display:flex;flex-direction:column;flex:1}
 .cbrand{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--gris);text-transform:uppercase}
 .ctitle{font-size:13.5px;font-weight:600;line-height:1.36;margin:5px 0 9px;cursor:pointer;
@@ -193,7 +192,7 @@ nav.main a:hover{color:var(--rojo)}
 .cprice .now{font-family:var(--disp);font-weight:900;font-size:21px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .cprice .was{font-size:12.5px;color:#939EAB;text-decoration:line-through;margin-left:7px}
 .csave{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;color:var(--verde);
-  background:rgba(30,158,90,.1);padding:3px 7px;border-radius:3px}
+  background:rgba(8,122,175,.1);padding:3px 7px;border-radius:3px}
 .cuota{display:block;margin-top:6px;font-size:11.5px;color:var(--azul-med);font-weight:600}
 .cstock{margin-top:8px;font-size:11.5px;color:var(--gris);display:flex;align-items:center;gap:6px}
 .cstock i{width:6px;height:6px;border-radius:50%;background:var(--verde);flex:0 0 auto}
@@ -203,12 +202,12 @@ nav.main a:hover{color:var(--rojo)}
 .cadd.done{background:var(--verde);border-color:var(--verde);color:#fff}
 
 /* ---------- Banners ---------- */
-.bigb{border-radius:12px;overflow:hidden;background:var(--rojo);color:#fff;
+.bigb{border-radius:12px;overflow:hidden;background:var(--primario);color:#fff;
   display:grid;grid-template-columns:1.1fr 1fr;min-height:280px}
 @media(max-width:760px){.bigb{grid-template-columns:1fr;min-height:0}}
 .bigb .bt{padding:34px 36px;display:flex;flex-direction:column;justify-content:center}
 .bigb .bt h3{font-size:clamp(24px,4vw,33px);font-weight:900;margin-bottom:8px;letter-spacing:-.03em}
-.bigb .bt p{margin:0 0 18px;color:#FFD6D8;font-size:14.5px;max-width:42ch}
+.bigb .bt p{margin:0 0 18px;color:#E3F5FF;font-size:14.5px;max-width:42ch}
 .bigb .bi{background:var(--sup);display:flex;align-items:center;justify-content:center;padding:20px}
 .bigb .bi img{max-height:250px;object-fit:contain}
 .bdoble{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
@@ -238,7 +237,7 @@ nav.main a:hover{color:var(--rojo)}
 .cbox .lbl{display:inline-block;font-family:var(--disp);font-weight:800;font-size:11px;
   letter-spacing:.09em;padding:4px 10px;border-radius:3px;margin-bottom:12px}
 .cbox.a .lbl{background:#fff;color:var(--azul)}
-.cbox.b .lbl{background:var(--ambar);color:#3D2600}
+.cbox.b .lbl{background:var(--ambar);color:#124E78}
 .cbox h4{font-size:18px;font-weight:700;margin-bottom:10px}
 .cbox ul{margin:0;padding-left:18px;font-size:13.5px;color:#C7DEEE;line-height:1.78}
 
@@ -260,7 +259,7 @@ nav.main a:hover{color:var(--rojo)}
 .reel .rcap b{display:block;font-size:12.5px;font-weight:700;line-height:1.3;margin-bottom:7px}
 .pill{display:inline-flex;align-items:center;gap:5px;background:#fff;color:var(--tinta);
   border-radius:20px;padding:4px 10px;font-size:11px;font-weight:700}
-.pill em{font-style:normal;color:var(--rojo)}
+.pill em{font-style:normal;color:var(--primario)}
 .reel .loading{position:absolute;inset:0;z-index:5;background:rgba(11,30,53,.85);
   display:flex;align-items:center;justify-content:center;font-size:12.5px;color:#BCD6EA;text-align:center;padding:16px}
 
@@ -290,7 +289,7 @@ footer .flogo{height:44px;margin-bottom:14px}
 /* ---------- WhatsApp flotante ---------- */
 .wafloat{position:fixed;right:18px;bottom:18px;z-index:90;background:var(--verde);color:#fff;
   border-radius:30px;padding:13px 20px;font-weight:700;font-size:14px;
-  box-shadow:0 10px 28px -8px rgba(30,158,90,.7);display:flex;align-items:center;gap:9px}
+  box-shadow:0 10px 28px -8px rgba(8,122,175,.7);display:flex;align-items:center;gap:9px}
 @media(max-width:560px){.wafloat span{display:none}.wafloat{padding:15px;border-radius:50%}}
 
 /* ---------- Pop-up ---------- */
@@ -311,7 +310,7 @@ footer .flogo{height:44px;margin-bottom:14px}
 .pop p{margin:0 0 16px;color:var(--gris);font-size:13.5px}
 .pop .pin{display:flex;border:1.5px solid var(--linea);border-radius:7px;overflow:hidden;margin-bottom:11px}
 .pop .pin input{flex:1;border:0;padding:11px 12px;font:inherit;font-size:13.5px;outline:0;min-width:0}
-.pop .pin button{border:0;background:var(--rojo);color:#fff;font-weight:700;padding:0 17px;font-size:13px;cursor:pointer}
+.pop .pin button{border:0;background:var(--primario);color:#fff;font-weight:700;padding:0 17px;font-size:13px;cursor:pointer}
 .pop .pno{background:none;border:0;color:var(--gris);font-size:12.5px;text-decoration:underline;cursor:pointer;padding:0}
 .pop .px{position:absolute;top:10px;right:12px;width:32px;height:32px;border-radius:50%;
   background:rgba(0,0,0,.07);border:0;font-size:16px;color:var(--gris);cursor:pointer;z-index:4}
@@ -337,13 +336,13 @@ footer .flogo{height:44px;margin-bottom:14px}
 .pb{font-family:var(--disp);font-weight:800;font-size:11px;letter-spacing:.06em;
   padding:5px 10px;border-radius:3px;text-transform:uppercase}
 .pb.nuevo{background:var(--azul);color:#fff}
-.pb.semi{background:var(--ambar);color:#3D2600}
+.pb.semi{background:var(--ambar);color:#124E78}
 .pb.gar{background:var(--sup);color:var(--azul);border:1px solid var(--linea)}
 .pblock{border:1px solid var(--linea);border-radius:11px;padding:20px 22px;margin-bottom:16px}
 .pblock .now{font-family:var(--disp);font-weight:900;font-size:38px;letter-spacing:-.03em;
   line-height:1;font-variant-numeric:tabular-nums}
 .pblock .was{color:#939EAB;text-decoration:line-through;font-size:16px;margin-left:11px}
-.pblock .sv{display:inline-block;margin-top:10px;background:rgba(30,158,90,.11);color:var(--verde);
+.pblock .sv{display:inline-block;margin-top:10px;background:rgba(8,122,175,.11);color:var(--verde);
   font-weight:700;font-size:13px;padding:5px 10px;border-radius:4px}
 .pblock .cuo{margin-top:10px;color:var(--azul-med);font-weight:600;font-size:13.5px}
 .pstock{display:flex;align-items:center;gap:8px;font-size:13.5px;margin:14px 0}
@@ -427,8 +426,8 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 .dosc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:520px){.dosc{grid-template-columns:1fr}}
 .zoneinfo{border-radius:9px;padding:14px 16px;font-size:13.5px;margin-top:4px}
-.zoneinfo.ok{background:rgba(30,158,90,.09);border:1px solid rgba(30,158,90,.35);color:#11663A}
-.zoneinfo.no{background:#FFF6E6;border:1px solid var(--ambar);color:#7A4F00}
+.zoneinfo.ok{background:rgba(8,122,175,.09);border:1px solid rgba(8,122,175,.35);color:#124E78}
+.zoneinfo.no{background:#EDF8FF;border:1px solid var(--ambar);color:#124E78}
 .zoneinfo b{display:block;margin-bottom:3px}
 .resumen{border:1px solid var(--linea);border-radius:11px;padding:22px 24px;position:sticky;top:150px}
 .resumen h4{font-size:16px;font-weight:800;margin-bottom:14px}
@@ -458,6 +457,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 @media(prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
 </style>
+<link rel="stylesheet" href="assets/storefront.css">
 </head>
 <body>
 
@@ -473,7 +473,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
   <div class="head"><div class="in">
     <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
     <a class="logo" href="#" onclick="irHome();return false">
-      <img src="https://www.mundiofertas.net/archivos/multimedia/fondo.png" alt="Mundiofertas"
+      <img src="assets/logo.png" alt="Mundiofertas"
            onerror="this.outerHTML='<span class=&quot;fb&quot;>Mundi<i>ofertas</i></span>'">
     </a>
     <form class="searchbox" onsubmit="buscar(event)">
@@ -489,7 +489,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
   </div></div>
 
   <nav class="main"><div class="in">
-    <a href="#" class="all">☰ Todas las categorías</a>
+    <a href="#categorias" class="all">☰ Todas las categorías</a>
     <a href="#ofertas" class="of">Ofertas</a>
     <a href="#americanos">Americanos revisados</a>
     <a href="#categorias">Línea blanca</a>
@@ -523,30 +523,15 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <!-- ============ VISTA: INICIO ============ -->
 <main id="home">
 
-<section class="hero"><div class="in">
-  <div class="deal">
-    <div class="txt">
-      <span class="tag">OFERTA DE LA SEMANA</span>
-      <h2>Aire minisplit 12,000 BTU Inverter</h2>
-      <div class="bl">Comfortstar · SEER 22 · Nuevo con garantía de 1 año</div>
-      <div class="pricebig"><span class="now">L 8,490</span><span class="was">L 10,614</span></div>
-      <div class="save">Ahorrás L 2,124</div>
-      <div class="cta">
-        <button class="btn p" onclick="verProducto('minisplit')">Ver producto</button>
-        <a class="btn g" href="#" onclick="wa('minisplit');return false">Preguntar por WhatsApp</a>
-      </div>
-      <div class="vig">Precio válido hasta el domingo · Disponible en ambas tiendas</div>
-    </div>
-    <div class="ph"><img src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a1da060dbdf6.png" alt="Aire minisplit Comfortstar 12,000 BTU" onerror="this.style.display='none'"></div>
+<section class="showcase" aria-labelledby="home-title"><div class="in">
+  <div class="welcome"><div><span class="eyebrow">TU CASA. TUS PLANES. TUS OFERTAS.</span><h1 id="home-title">Dale un nuevo aire a tu hogar.</h1></div><a href="#categorias">Explorá nuestras categorías ↗</a></div>
+  <div class="campaign-shell">
+    <div class="campaign-track" id="campaigns" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Promociones destacadas"></div>
+    <button class="slider-arrow prev" data-track="campaigns" data-dir="-1" aria-label="Promoción anterior">‹</button>
+    <button class="slider-arrow next" data-track="campaigns" data-dir="1" aria-label="Siguiente promoción">›</button>
   </div>
-  <div class="quick">
-    <a class="qcard" href="#categorias"><span class="ic">🏠</span>
-      <span><b>Comprar por categoría</b><span>Línea blanca, muebles, camas</span></span></a>
-    <a class="qcard" href="#americanos"><span class="ic" style="background:rgba(245,165,36,.18)">🇺🇸</span>
-      <span><b>Americanos revisados</b><span>Whirlpool, Kenmore, Frigidaire</span></span></a>
-    <a class="qcard" href="#negocio"><span class="ic" style="background:rgba(16,36,63,.09)">🏪</span>
-      <span><b>Equipar mi negocio</b><span>Vitrinas, congeladores, estufas</span></span></a>
-  </div>
+  <div class="slider-bottom"><span>Todo para vivir mejor, en un solo lugar.</span><div id="campaignDots" class="slider-dots" aria-label="Elegir promoción"></div><span id="campaignStatus" aria-live="polite">01 / 04</span></div>
+  <div class="discovery" id="discovery"></div>
 </div></section>
 
 <section class="trust"><div class="in">
@@ -558,10 +543,10 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 <section class="blk" id="ofertas"><div class="in">
   <div class="bhead">
-    <div><h3>Ofertas de la semana</h3><p>Precios vigentes hasta el domingo 20 de septiembre</p></div>
-    <a href="#">Ver todas las ofertas →</a>
+    <div><h3>Ofertas de la semana</h3><p>Encontrá tu próximo favorito para la casa</p></div>
+    <a href="#ofertas">Deslizá para ver más →</a>
   </div>
-  <div class="grid" id="gridOfertas"></div>
+  <div class="product-slider"><button class="slider-arrow prev" data-track="gridOfertas" data-dir="-1" aria-label="Ofertas anteriores">‹</button><div class="grid product-track" id="gridOfertas" tabindex="0" aria-label="Productos en oferta"></div><button class="slider-arrow next" data-track="gridOfertas" data-dir="1" aria-label="Más ofertas">›</button></div>
 </div></section>
 
 <section class="blk" style="padding-top:0"><div class="in">
@@ -569,7 +554,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
     <div class="bt">
       <h3>Quincena de refrigeración</h3>
       <p>Vitrinas, congeladores y enfriadores hasta 20% abajo, con instalación incluida en San Pedro Sula y Villanueva.</p>
-      <div><a class="btn" style="background:#fff;color:var(--rojo)" href="#negocio">Ver la promoción</a></div>
+      <div><a class="btn" style="background:#fff;color:var(--primario)" href="#negocio">Ver la promoción</a></div>
     </div>
     <div class="bi"><img src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a679403e4b27.jpeg" alt="Vitrina vertical no frost" onerror="this.style.display='none'"></div>
   </div>
@@ -589,8 +574,8 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 <section class="blk sup" id="categorias"><div class="in">
   <div class="bhead">
-    <div><h3>Comprar por categoría</h3><p>Categorías ordenadas, sin duplicados, con filtros dentro de cada una</p></div>
-    <a href="#">Ver catálogo completo →</a>
+    <div><h3>Comprar por categoría</h3><p>Encontrá lo que necesitás para cada espacio de tu hogar</p></div>
+    <a href="#ofertas">Explorar ofertas →</a>
   </div>
   <div class="cats">
     <a class="cat" href="#ofertas"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Categorias/imagen-69cc43b1379bd.png" alt="" onerror="this.style.display='none'"></span><b>Camas y colchones</b></a>
@@ -707,7 +692,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 <footer class="site" id="pie"><div class="in">
   <div>
-    <img class="flogo" src="https://www.mundiofertas.net/archivos/img/logo-w.png" alt="Mundiofertas" onerror="this.style.display='none'">
+    <img class="flogo" src="assets/logo.png" alt="Mundiofertas" onerror="this.style.display='none'">
     <p style="margin:0">Desde 1989 importando electrodomésticos americanos ligeramente usados y vendiendo línea nueva, con taller propio, garantía escrita y precios justos.</p>
     <div class="pays"><i></i><i></i><i></i><i></i><i></i></div>
   </div>
@@ -827,7 +812,7 @@ function tarjeta(k){
     </div></article>`;
 }
 document.getElementById("gridOfertas").innerHTML =
-  ["camaMat","ropero","vitrina40","comedorE","camaUni"].map(tarjeta).join("");
+  ["minisplit","vitrina40","vitrina46","camaMat","ropero","comedorE","camaUni"].map(tarjeta).join("");
 document.getElementById("gridNegocio").innerHTML =
   ["vitrina46","comedorD","camaFac"].map(tarjeta).join("");
 
@@ -1017,7 +1002,7 @@ function mostrarPop(){
   });
   setTimeout(()=>{ const i = s.querySelector("input"); if(i) i.focus(); }, 80);
 }
-setTimeout(mostrarPop, 12000);
+// La portada se puede explorar sin interrupciones automáticas.
 
 /* ===================== CHECKOUT ===================== */
 function marcarPaso(n){
@@ -1271,5 +1256,6 @@ document.querySelectorAll(".hact a").forEach(a => {
   if(a.textContent.indexOf("🛒") > -1) a.onclick = e => { e.preventDefault(); abrirCarrito(); };
 });
 </script>
+<script src="assets/storefront.js"></script>
 </body>
 </html>

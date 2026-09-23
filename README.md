@@ -1,6 +1,6 @@
 # Propuesta de rediseño — Mundiofertas
 
-Tres archivos, sin dependencias. Se abren en cualquier navegador.
+Tres páginas HTML y la carpeta `assets/`, sin dependencias de compilación. Se abren en cualquier navegador.
 
 | Archivo | Qué es | Para quién |
 |---|---|---|
@@ -13,7 +13,7 @@ El botón de la propuesta enlaza a `demo.html`, así que los tres deben quedar e
 ## Publicar en GitHub Pages
 
 1. Crear un repositorio nuevo, público, por ejemplo `mundiofertas-propuesta`.
-2. Subir los cuatro archivos de esta carpeta a la raíz del repositorio.
+2. Subir los archivos HTML, README y la carpeta `assets/` a la raíz del repositorio.
 3. Entrar a **Settings → Pages**.
 4. En *Source* elegir **Deploy from a branch**, rama `main`, carpeta `/ (root)`. Guardar.
 5. Esperar dos o tres minutos. La dirección queda así:
@@ -34,3 +34,9 @@ Arrastrar esta carpeta a [app.netlify.com/drop](https://app.netlify.com/drop). D
 - Los tres archivos llevan `noindex`, así que no salen en Google mientras la propuesta esté en revisión.
 - La vista previa de WhatsApp ya está configurada: al pegar el enlace muestra el logo de Mundiofertas con título y descripción.
 - `demo.html` es una maqueta de diseño. El pago con Ficopago, la búsqueda y los botones de WhatsApp muestran un aviso en lugar de ejecutar la acción real.
+
+## Portada azul y blanca
+
+La tienda de demostración está en `demo.html`. Su portada usa el logo local en `assets/logo.png`, estilos en `assets/storefront.css` y carruseles en `assets/storefront.js`. Conservar esa carpeta al publicar. Los carruseles admiten flechas, teclado y desplazamiento táctil, sin rotación automática.
+
+Para revisar localmente: `python3 -m http.server 8765` y abrir `http://localhost:8765/demo.html`.
