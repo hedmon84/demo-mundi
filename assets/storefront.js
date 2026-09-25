@@ -1,18 +1,12 @@
-/* Manual, touch and keyboard carousels. No automatic rotation. */
+/* Responsive retail hero with accessible six-second rotation. */
 const campaigns = [
-  {k:'minisplit',tag:'FRESCURA QUE SE SIENTE',title:'Más fresco.<br>Más en casa.',text:'Aires inverter para disfrutar cada espacio.',cta:'Ver aire'},
-  {k:'vitrina40',tag:'REFRIGERACIÓN A TU MEDIDA',title:'Grandes ideas.<br>Bien frescas.',text:'Equipá tu negocio con refrigeración americana.',cta:'Ver vitrina'},
-  {k:'camaMat',tag:'TU DESCANSO EMPIEZA AQUÍ',title:'Tu lugar<br>para recargar.',text:'Camas y colchones para tus mejores noches.',cta:'Ver cama'},
-  {k:'ropero',tag:'ESPACIO PARA LO QUE QUERÉS',title:'Un hogar<br>más tuyo.',text:'Muebles que van con vos y con tu espacio.',cta:'Ver mueble'}
+ {k:'minisplit',tag:'OFERTAS DE TEMPORADA',title:'Tu hogar<br>más fresco<br>por menos.',text:'Refrigeración, aires acondicionados y más para renovar tu hogar.',cta:'Ver ofertas',href:'#ofertas',theme:'fresh',second:'vitrina46'},
+ {k:'vitrina40',tag:'PARA TU NEGOCIO',title:'Grandes ideas.<br>Siempre frescas.',text:'Refrigeración comercial para dar el siguiente paso.',cta:'Ver refrigeración',theme:'business',second:'vitrina46'},
+ {k:'camaFac',tag:'DESCANSO A TU MEDIDA',title:'Descanso que<br>te renueva.',text:'Encontrá la cama ideal para tus mejores noches.',cta:'Ver cama',theme:'bedroom',second:'camaMat'},
+ {k:'ropero',tag:'UN HOGAR MÁS TUYO',title:'Más espacio.<br>Más posibilidades.',text:'Muebles que acompañan tus planes.',cta:'Ver mueble',theme:'living',second:'comedorE'}
 ];
 const track=document.getElementById('campaigns');
-track.innerHTML=campaigns.map((c,i)=>`<article class="campaign" role="group" aria-roledescription="diapositiva" aria-label="${i+1} de ${campaigns.length}"><span class="eyebrow">${c.tag}</span><h2>${c.title}</h2><p>${c.text}</p><img src="${img(c.k)}" alt="${P[c.k].n}" ${i>1?'loading="lazy"':'fetchpriority="high"'}><div class="campaign-foot"><div class="campaign-price"><small>${P[c.k].m} · ${P[c.k].cond==='semi'?'Americano revisado':'Nuevo'}</small><strong>${L(P[c.k].p)}</strong></div><button onclick="verProducto('${c.k}')">${c.cta} ↗</button></div></article>`).join('');
-document.getElementById('discovery').innerHTML=[
- {k:'minisplit',tag:'Para tu hogar',title:'Climatización',href:'#ofertas'},
- {k:'vitrina46',tag:'Para emprender',title:'Refrigeración',href:'#negocio'},
- {k:'camaMat',tag:'Para descansar',title:'Camas y colchones',href:'#categorias'},
- {k:'ropero',tag:'Para renovar',title:'Muebles y más',href:'#categorias'}
-].map(c=>`<a class="discover-card" href="${c.href}"><div><small>${c.tag}</small><b>${c.title}</b><span>Explorar →</span></div><img src="${img(c.k)}" alt="" loading="lazy"></a>`).join('');
+track.innerHTML=campaigns.map((c,i)=>`<article class="campaign ${c.theme}" role="group" aria-roledescription="diapositiva" aria-label="${i+1} de ${campaigns.length}"><div class="campaign-copy"><span class="eyebrow">${c.tag}</span><h2>${c.title}</h2><p>${c.text}</p><div class="campaign-foot">${c.href?`<a href="${c.href}" class="hero-cta">${c.cta} →</a>`:`<button onclick="verProducto('${c.k}')">${c.cta} →</button>`}</div></div><div class="hero-products">${i===0?'<img class="hero-fridge" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-688bdcc769989.png" alt="Refrigeradora Indurama">':''}<img class="hero-secondary" src="${img(c.second)}" alt="${P[c.second].n}"><img class="hero-primary" src="${img(c.k)}" alt="${P[c.k].n}"></div></article>`).join('');
 const dots=document.getElementById('campaignDots');
 dots.innerHTML=campaigns.map((_,i)=>`<button aria-label="Ir a promoción ${i+1}" aria-current="${i===0}" data-slide="${i}"></button>`).join('');
 const motion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Mundiofertas">
-<meta property="og:title" content="Mundiofertas — Página de prueba">
-<meta property="og:description" content="Demostración navegable del sitio rediseñado: catálogo, ficha de producto, carrito y compra con Ficopago.">
-<meta property="og:image" content="assets/logo.png">
-<meta property="og:locale" content="es_HN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#124E78">
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="website" property="og:type"/>
+<meta content="Mundiofertas" property="og:site_name"/>
+<meta content="Mundiofertas — Página de prueba" property="og:title"/>
+<meta content="Demostración navegable del sitio rediseñado: catálogo, ficha de producto, carrito y compra con Ficopago." property="og:description"/>
+<meta content="assets/logo.png" property="og:image"/>
+<meta content="es_HN" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#124E78" name="theme-color"/>
+<meta content="noindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Mundiofertas — Página de prueba</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 /* =====================================================================
    MUNDIOFERTAS — PÁGINA DE PRUEBA
@@ -457,275 +458,210 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 
 @media(prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
 </style>
-<link rel="stylesheet" href="assets/leaflet/leaflet.css">
-<link rel="stylesheet" href="assets/storefront.css">
-</head>
+<link href="assets/leaflet/leaflet.css" rel="stylesheet"/>
+<link href="assets/storefront.css" rel="stylesheet"/>
+<link href="assets/reference-layout.css" rel="stylesheet"/></head>
 <body>
-
-<div class="demobar">Página de prueba — Mundiofertas · Los precios y productos son reales del catálogo actual. Es una demostración navegable, no la tienda en producción.</div>
-
-<div class="util"><div class="in">
-  <span><strong>2 tiendas:</strong> San Pedro Sula · Villanueva</span>
-  <span class="u3">Con vos desde 1989 · Envío a todo Honduras</span>
-  <span><strong>WhatsApp +504 3267-7622</strong></span>
-</div></div>
-
 <header class="site">
-  <div class="head"><div class="in">
-    <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
-    <a class="logo" href="#" onclick="irHome();return false">
-      <img src="assets/logo.png" alt="Mundiofertas"
-           onerror="this.outerHTML='<span class=&quot;fb&quot;>Mundi<i>ofertas</i></span>'">
-    </a>
-    <form class="searchbox" onsubmit="buscar(event)">
-      <input id="q" placeholder="Buscar refrigeradora, cama, vitrina, aire acondicionado…" aria-label="Buscar productos">
-      <button type="submit">Buscar</button>
-    </form>
-    <div class="hact">
-      <a href="#"><b>Mi cuenta</b><span class="lbl">Ingresar</span></a>
-      <a href="#"><b>♡ <span id="favn">0</span></b><span class="lbl">Favoritos</span></a>
-      <a href="#"><b>🛒 <span id="carttot">L 0</span></b><span class="lbl">Carrito</span>
-        <span class="cartnum hide" id="cartn">0</span></a>
-    </div>
-  </div></div>
-
-  <nav class="main"><div class="in">
-    <button class="category-toggle" id="categoryToggle" aria-expanded="false" aria-controls="categoryDropdown">☰ Todas las categorías <span aria-hidden="true">⌄</span></button>
-    <a href="#ofertas" class="of">Ofertas</a>
-    <a href="#americanos">Americanos revisados</a>
-    <a href="#categorias">Línea blanca</a>
-    <a href="#categorias">Mueblería</a>
-    <a href="#categorias">Camas</a>
-    <a href="#negocio">Para tu negocio</a>
-    <a href="#ubicaciones">Tiendas</a><a href="historia.html" target="_blank" rel="noopener">Historia</a>
-  </div></nav>
-<div class="category-dropdown" id="categoryDropdown" hidden><div class="category-dropdown-heading"><div><strong>¿Qué estás buscando?</strong><p>Explorá el catálogo de Mundi Ofertas. Los productos se abren en la tienda oficial.</p></div><button id="closeCategories" aria-label="Cerrar categorías">×</button></div><div class="category-groups"><details class="category-group"><summary>Accesorios de casa</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32979/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32980/">Accesorios de casa ↗</a></li></ul></details><details class="category-group"><summary>Accesorios y mas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29607/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29608/">Accesorios ↗</a></li></ul></details><details class="category-group"><summary>Aires acondicionados</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/1/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/12315/">Mini split ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/3/">Aires de ventana ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/2/">Mini split ↗</a></li></ul></details><details class="category-group"><summary>Camas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/4/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38443/">Accesorios de cama ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29606/">Almohadas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/5/">Camas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/6/">Accesorios de cama ↗</a></li></ul></details><details class="category-group"><summary>Congeladores y enfriadores</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/7/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/10/">Congeladores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/8/">Vitrinas refrigerantes ↗</a></li></ul></details><details class="category-group"><summary>Electronica</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/11/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/12/">Televisores ↗</a></li></ul></details><details class="category-group"><summary>Estufas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/13/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/17/">Estufa electrica mesa ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/44/">Estufa electrica grande ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/16/">Estufas de gas mesa ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/14/">Estufas de gas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/15/">Estufas semi industriales ↗</a></li></ul></details><details class="category-group"><summary>Hogar y electronica</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/18/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/22/">Enfriadores de agua ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/21/">Hornos electricos ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/45/">Licuadoras ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/19/">Microondas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/39084/">Percoladoras de café ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/20/">Planchas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/27/">Ventiladores ↗</a></li></ul></details><details class="category-group"><summary>Lavadoras</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38440/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38441/">Lavadoras nuevas ↗</a></li></ul></details><details class="category-group"><summary>Muebleria</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/28/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35/">Alacenas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/42403/">Alacenas y estantes ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/39741/">Bufeteras ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/30/">Roperos ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/31/">Centros de entretenimiento ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32/">Comedores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38/">Comedores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38438/">Comodas / tocadores de madera ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/42402/">Escritorios ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29/">Juegos de sala ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/36/">Mesas de vidrio ↗</a></li></ul></details><details class="category-group"><summary>N-lavadora nueva</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35248/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35249/">LAVADORA 17 KG (A+) &quot;WHIRLPOOL&quot; 12 CICLOS BLANCA #8MWTW1713 ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35250/">LAVADORA 16 KG (A+) &quot;GRS&quot; CARGA SUPERIOR BLANCA #LAV16-CS2-TV-W ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35251/">LAVADORA 18KG (A+) &quot;MABE&quot; DIFUNSOR BLANCA #LMA78113CBAB0 ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35252/">LAVADORA 20 KG (A+) &quot;GRS&quot; BLANCA AUTOMATICA TAPA PLASTICO/VIDRIO #LAV20-CS2-TV-W ↗</a></li></ul></details></div></div>
-</header>
-
-<div class="mobmenu" id="mobmenu">
-  <div class="panel">
-    <button class="close" id="closemenu" aria-label="Cerrar menú">×</button>
-    <h4>Comprar</h4>
-    <a href="#ofertas">Ofertas de la semana</a>
-    <a href="#americanos">Americanos revisados</a>
-    <h4>Categorías y subcategorías</h4><p class="category-hint">Los productos se abren en la tienda oficial.</p><div class="mobile-categories"><details class="category-group"><summary>Accesorios de casa</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32979/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32980/">Accesorios de casa ↗</a></li></ul></details><details class="category-group"><summary>Accesorios y mas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29607/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29608/">Accesorios ↗</a></li></ul></details><details class="category-group"><summary>Aires acondicionados</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/1/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/12315/">Mini split ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/3/">Aires de ventana ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/2/">Mini split ↗</a></li></ul></details><details class="category-group"><summary>Camas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/4/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38443/">Accesorios de cama ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29606/">Almohadas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/5/">Camas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/6/">Accesorios de cama ↗</a></li></ul></details><details class="category-group"><summary>Congeladores y enfriadores</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/7/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/10/">Congeladores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/8/">Vitrinas refrigerantes ↗</a></li></ul></details><details class="category-group"><summary>Electronica</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/11/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/12/">Televisores ↗</a></li></ul></details><details class="category-group"><summary>Estufas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/13/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/17/">Estufa electrica mesa ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/44/">Estufa electrica grande ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/16/">Estufas de gas mesa ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/14/">Estufas de gas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/15/">Estufas semi industriales ↗</a></li></ul></details><details class="category-group"><summary>Hogar y electronica</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/18/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/22/">Enfriadores de agua ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/21/">Hornos electricos ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/45/">Licuadoras ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/19/">Microondas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/39084/">Percoladoras de café ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/20/">Planchas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/27/">Ventiladores ↗</a></li></ul></details><details class="category-group"><summary>Lavadoras</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38440/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38441/">Lavadoras nuevas ↗</a></li></ul></details><details class="category-group"><summary>Muebleria</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/28/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35/">Alacenas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/42403/">Alacenas y estantes ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/39741/">Bufeteras ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/30/">Roperos ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/31/">Centros de entretenimiento ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32/">Comedores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38/">Comedores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38438/">Comodas / tocadores de madera ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/42402/">Escritorios ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29/">Juegos de sala ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/36/">Mesas de vidrio ↗</a></li></ul></details><details class="category-group"><summary>N-lavadora nueva</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35248/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35249/">LAVADORA 17 KG (A+) &quot;WHIRLPOOL&quot; 12 CICLOS BLANCA #8MWTW1713 ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35250/">LAVADORA 16 KG (A+) &quot;GRS&quot; CARGA SUPERIOR BLANCA #LAV16-CS2-TV-W ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35251/">LAVADORA 18KG (A+) &quot;MABE&quot; DIFUNSOR BLANCA #LMA78113CBAB0 ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35252/">LAVADORA 20 KG (A+) &quot;GRS&quot; BLANCA AUTOMATICA TAPA PLASTICO/VIDRIO #LAV20-CS2-TV-W ↗</a></li></ul></details></div>
-    <h4>Negocio</h4>
-    <a href="#negocio">Equipar mi negocio</a>
-    <h4>Ayuda</h4>
-    <a href="#ubicaciones">Nuestras tiendas</a><a href="historia.html" target="_blank" rel="noopener">Nuestra historia</a>
-    <a href="#pie">Garantías y envíos</a>
-  </div>
+<div class="head"><div class="in">
+<button aria-label="Abrir menú" class="burger" id="burger">☰</button>
+<a class="logo" href="#" onclick="irHome();return false">
+<img alt="Mundiofertas" onerror="this.outerHTML='&lt;span class=&quot;fb&quot;&gt;Mundi&lt;i&gt;ofertas&lt;/i&gt;&lt;/span&gt;'" src="assets/logo.png"/>
+</a>
+<form class="searchbox" onsubmit="buscar(event)">
+<input aria-label="Buscar productos" id="q" placeholder="Buscar refrigeradora, cama, vitrina, aire acondicionado…"/>
+<button type="submit">Buscar</button>
+</form>
+<div class="hact">
+<a href="#"><b>Mi cuenta</b><span class="lbl">Ingresar</span></a>
+<a href="#"><b>♡ <span id="favn">0</span></b><span class="lbl">Favoritos</span></a>
+<a href="#"><b>🛒 <span id="carttot">L 0</span></b><span class="lbl">Carrito</span>
+<span class="cartnum hide" id="cartn">0</span></a>
 </div>
-
+</div></div>
+<nav class="main"><div class="in">
+<button aria-controls="categoryDropdown" aria-expanded="false" class="category-toggle" id="categoryToggle">☰ Todas las categorías <span aria-hidden="true">⌄</span></button>
+<a class="of" href="#ofertas">Ofertas</a>
+<a href="#americanos">Americanos revisados</a>
+<a href="#categorias">Línea blanca</a>
+<a href="#categorias">Mueblería</a>
+<a href="#categorias">Camas</a>
+<a href="#negocio">Para tu negocio</a>
+<a href="#ubicaciones">Tiendas</a><a href="historia.html" rel="noopener" target="_blank">Historia</a>
+</div></nav>
+<div class="category-dropdown" hidden="" id="categoryDropdown"><div class="category-dropdown-heading"><div><strong>¿Qué estás buscando?</strong><p>Explorá el catálogo de Mundi Ofertas. Los productos se abren en la tienda oficial.</p></div><button aria-label="Cerrar categorías" id="closeCategories">×</button></div><div class="category-groups"><details class="category-group"><summary>Accesorios de casa</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/32979/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/32980/" rel="noopener noreferrer" target="_blank">Accesorios de casa ↗</a></li></ul></details><details class="category-group"><summary>Accesorios y mas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/29607/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29608/" rel="noopener noreferrer" target="_blank">Accesorios ↗</a></li></ul></details><details class="category-group"><summary>Aires acondicionados</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/1/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/12315/" rel="noopener noreferrer" target="_blank">Mini split ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/3/" rel="noopener noreferrer" target="_blank">Aires de ventana ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/2/" rel="noopener noreferrer" target="_blank">Mini split ↗</a></li></ul></details><details class="category-group"><summary>Camas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/4/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38443/" rel="noopener noreferrer" target="_blank">Accesorios de cama ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29606/" rel="noopener noreferrer" target="_blank">Almohadas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/5/" rel="noopener noreferrer" target="_blank">Camas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/6/" rel="noopener noreferrer" target="_blank">Accesorios de cama ↗</a></li></ul></details><details class="category-group"><summary>Congeladores y enfriadores</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/7/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/10/" rel="noopener noreferrer" target="_blank">Congeladores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/8/" rel="noopener noreferrer" target="_blank">Vitrinas refrigerantes ↗</a></li></ul></details><details class="category-group"><summary>Electronica</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/11/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/12/" rel="noopener noreferrer" target="_blank">Televisores ↗</a></li></ul></details><details class="category-group"><summary>Estufas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/13/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/17/" rel="noopener noreferrer" target="_blank">Estufa electrica mesa ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/44/" rel="noopener noreferrer" target="_blank">Estufa electrica grande ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/16/" rel="noopener noreferrer" target="_blank">Estufas de gas mesa ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/14/" rel="noopener noreferrer" target="_blank">Estufas de gas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/15/" rel="noopener noreferrer" target="_blank">Estufas semi industriales ↗</a></li></ul></details><details class="category-group"><summary>Hogar y electronica</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/18/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/22/" rel="noopener noreferrer" target="_blank">Enfriadores de agua ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/21/" rel="noopener noreferrer" target="_blank">Hornos electricos ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/45/" rel="noopener noreferrer" target="_blank">Licuadoras ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/19/" rel="noopener noreferrer" target="_blank">Microondas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/39084/" rel="noopener noreferrer" target="_blank">Percoladoras de café ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/20/" rel="noopener noreferrer" target="_blank">Planchas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/27/" rel="noopener noreferrer" target="_blank">Ventiladores ↗</a></li></ul></details><details class="category-group"><summary>Lavadoras</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/38440/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38441/" rel="noopener noreferrer" target="_blank">Lavadoras nuevas ↗</a></li></ul></details><details class="category-group"><summary>Muebleria</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/28/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35/" rel="noopener noreferrer" target="_blank">Alacenas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/42403/" rel="noopener noreferrer" target="_blank">Alacenas y estantes ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/39741/" rel="noopener noreferrer" target="_blank">Bufeteras ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/30/" rel="noopener noreferrer" target="_blank">Roperos ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/31/" rel="noopener noreferrer" target="_blank">Centros de entretenimiento ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/32/" rel="noopener noreferrer" target="_blank">Comedores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38/" rel="noopener noreferrer" target="_blank">Comedores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38438/" rel="noopener noreferrer" target="_blank">Comodas / tocadores de madera ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/42402/" rel="noopener noreferrer" target="_blank">Escritorios ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29/" rel="noopener noreferrer" target="_blank">Juegos de sala ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/36/" rel="noopener noreferrer" target="_blank">Mesas de vidrio ↗</a></li></ul></details><details class="category-group"><summary>N-lavadora nueva</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/35248/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35249/" rel="noopener noreferrer" target="_blank">LAVADORA 17 KG (A+) "WHIRLPOOL" 12 CICLOS BLANCA #8MWTW1713 ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35250/" rel="noopener noreferrer" target="_blank">LAVADORA 16 KG (A+) "GRS" CARGA SUPERIOR BLANCA #LAV16-CS2-TV-W ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35251/" rel="noopener noreferrer" target="_blank">LAVADORA 18KG (A+) "MABE" DIFUNSOR BLANCA #LMA78113CBAB0 ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35252/" rel="noopener noreferrer" target="_blank">LAVADORA 20 KG (A+) "GRS" BLANCA AUTOMATICA TAPA PLASTICO/VIDRIO #LAV20-CS2-TV-W ↗</a></li></ul></details></div></div>
+</header>
+<div class="mobmenu" id="mobmenu">
+<div class="panel">
+<button aria-label="Cerrar menú" class="close" id="closemenu">×</button>
+<h4>Comprar</h4>
+<a href="#ofertas">Ofertas de la semana</a>
+<a href="#americanos">Americanos revisados</a>
+<h4>Categorías y subcategorías</h4><p class="category-hint">Los productos se abren en la tienda oficial.</p><div class="mobile-categories"><details class="category-group"><summary>Accesorios de casa</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/32979/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/32980/" rel="noopener noreferrer" target="_blank">Accesorios de casa ↗</a></li></ul></details><details class="category-group"><summary>Accesorios y mas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/29607/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29608/" rel="noopener noreferrer" target="_blank">Accesorios ↗</a></li></ul></details><details class="category-group"><summary>Aires acondicionados</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/1/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/12315/" rel="noopener noreferrer" target="_blank">Mini split ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/3/" rel="noopener noreferrer" target="_blank">Aires de ventana ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/2/" rel="noopener noreferrer" target="_blank">Mini split ↗</a></li></ul></details><details class="category-group"><summary>Camas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/4/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38443/" rel="noopener noreferrer" target="_blank">Accesorios de cama ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29606/" rel="noopener noreferrer" target="_blank">Almohadas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/5/" rel="noopener noreferrer" target="_blank">Camas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/6/" rel="noopener noreferrer" target="_blank">Accesorios de cama ↗</a></li></ul></details><details class="category-group"><summary>Congeladores y enfriadores</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/7/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/10/" rel="noopener noreferrer" target="_blank">Congeladores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/8/" rel="noopener noreferrer" target="_blank">Vitrinas refrigerantes ↗</a></li></ul></details><details class="category-group"><summary>Electronica</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/11/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/12/" rel="noopener noreferrer" target="_blank">Televisores ↗</a></li></ul></details><details class="category-group"><summary>Estufas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/13/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/17/" rel="noopener noreferrer" target="_blank">Estufa electrica mesa ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/44/" rel="noopener noreferrer" target="_blank">Estufa electrica grande ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/16/" rel="noopener noreferrer" target="_blank">Estufas de gas mesa ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/14/" rel="noopener noreferrer" target="_blank">Estufas de gas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/15/" rel="noopener noreferrer" target="_blank">Estufas semi industriales ↗</a></li></ul></details><details class="category-group"><summary>Hogar y electronica</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/18/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/22/" rel="noopener noreferrer" target="_blank">Enfriadores de agua ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/21/" rel="noopener noreferrer" target="_blank">Hornos electricos ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/45/" rel="noopener noreferrer" target="_blank">Licuadoras ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/19/" rel="noopener noreferrer" target="_blank">Microondas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/39084/" rel="noopener noreferrer" target="_blank">Percoladoras de café ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/20/" rel="noopener noreferrer" target="_blank">Planchas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/27/" rel="noopener noreferrer" target="_blank">Ventiladores ↗</a></li></ul></details><details class="category-group"><summary>Lavadoras</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/38440/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38441/" rel="noopener noreferrer" target="_blank">Lavadoras nuevas ↗</a></li></ul></details><details class="category-group"><summary>Muebleria</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/28/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35/" rel="noopener noreferrer" target="_blank">Alacenas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/42403/" rel="noopener noreferrer" target="_blank">Alacenas y estantes ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/39741/" rel="noopener noreferrer" target="_blank">Bufeteras ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/30/" rel="noopener noreferrer" target="_blank">Roperos ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/31/" rel="noopener noreferrer" target="_blank">Centros de entretenimiento ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/32/" rel="noopener noreferrer" target="_blank">Comedores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38/" rel="noopener noreferrer" target="_blank">Comedores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38438/" rel="noopener noreferrer" target="_blank">Comodas / tocadores de madera ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/42402/" rel="noopener noreferrer" target="_blank">Escritorios ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29/" rel="noopener noreferrer" target="_blank">Juegos de sala ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/36/" rel="noopener noreferrer" target="_blank">Mesas de vidrio ↗</a></li></ul></details><details class="category-group"><summary>N-lavadora nueva</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/35248/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35249/" rel="noopener noreferrer" target="_blank">LAVADORA 17 KG (A+) "WHIRLPOOL" 12 CICLOS BLANCA #8MWTW1713 ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35250/" rel="noopener noreferrer" target="_blank">LAVADORA 16 KG (A+) "GRS" CARGA SUPERIOR BLANCA #LAV16-CS2-TV-W ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35251/" rel="noopener noreferrer" target="_blank">LAVADORA 18KG (A+) "MABE" DIFUNSOR BLANCA #LMA78113CBAB0 ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35252/" rel="noopener noreferrer" target="_blank">LAVADORA 20 KG (A+) "GRS" BLANCA AUTOMATICA TAPA PLASTICO/VIDRIO #LAV20-CS2-TV-W ↗</a></li></ul></details></div>
+<h4>Negocio</h4>
+<a href="#negocio">Equipar mi negocio</a>
+<h4>Ayuda</h4>
+<a href="#ubicaciones">Nuestras tiendas</a><a href="historia.html" rel="noopener" target="_blank">Nuestra historia</a>
+<a href="#pie">Garantías y envíos</a>
+</div>
+</div>
 <!-- ============ VISTA: INICIO ============ -->
-<main id="home">
-
-<section class="showcase" aria-labelledby="home-title"><div class="in">
-  <div class="welcome"><div><span class="eyebrow">TU CASA. TUS PLANES. TUS OFERTAS.</span><h1 id="home-title">Dale un nuevo aire a tu hogar.</h1></div><a href="#categorias">Explorá nuestras categorías ↗</a></div>
-  <div class="campaign-shell">
-    <div class="campaign-track" id="campaigns" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Promociones destacadas"></div>
-    <button class="slider-arrow prev" data-track="campaigns" data-dir="-1" aria-label="Promoción anterior">‹</button>
-    <button class="slider-arrow next" data-track="campaigns" data-dir="1" aria-label="Siguiente promoción">›</button>
-  </div>
-  <div class="slider-bottom"><span>Todo para vivir mejor, en un solo lugar.</span><div id="campaignDots" class="slider-dots" aria-label="Elegir promoción"></div><span id="campaignStatus" aria-live="polite">01 / 04</span></div>
-  <div class="discovery" id="discovery"></div>
+<main id="home"><h1 class="sr-only" id="home-title">Mundi Ofertas: electrodomésticos y todo para tu hogar</h1>
+<section aria-labelledby="home-title" class="showcase"><div class="in">
+<div class="campaign-shell">
+<div aria-label="Promociones destacadas" aria-roledescription="carrusel" class="campaign-track" id="campaigns" role="region" tabindex="0"></div>
+<button aria-label="Promoción anterior" class="slider-arrow prev" data-dir="-1" data-track="campaigns">‹</button>
+<button aria-label="Siguiente promoción" class="slider-arrow next" data-dir="1" data-track="campaigns">›</button>
+</div>
+<div class="slider-bottom"><span>Todo para vivir mejor, en un solo lugar.</span><div aria-label="Elegir promoción" class="slider-dots" id="campaignDots"></div><span aria-live="polite" id="campaignStatus">01 / 04</span></div>
+<div class="discovery" hidden="" id="discovery"></div>
 </div></section>
-
 <section class="trust"><div class="in">
-  <div class="tr"><span>🛡️</span><span><b>Garantía escrita</b><span>En lo nuevo y en la línea americana revisada</span></span></div>
-  <div class="tr"><span>🔧</span><span><b>Taller propio desde 1989</b><span>Cada equipo se revisa antes de salir</span></span></div>
-  <div class="tr"><span>🚚</span><span><b>Entrega e instalación</b><span>Desde la tienda más cercana a tu casa</span></span></div>
-  <div class="tr"><span>💳</span><span><b>Tarjeta o efectivo</b><span>Visa, Mastercard, Diners, Discover, JCB</span></span></div>
+<div class="tr"><span><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="30"><path d="M1 6h13v11H1z M14 10h4l4 4v3h-8 M4 17a2 2 0 1 0 4 0 M16 17a2 2 0 1 0 4 0"></path></svg></span><span><b>Entrega e instalación</b><span>Desde la tienda más cercana a tu casa</span></span></div><div class="tr"><span><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="30"><path d="M12 3 3 7v6c0 5 9 9 9 9s9-4 9-9V7l-9-4z M8 12l3 3 5-6"></path></svg></span><span><b>Garantía escrita</b><span>En lo nuevo y en la línea americana revisada</span></span></div>
+<div class="tr"><span><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="30"><path d="M14 6a5 5 0 0 0-6 6L2 18l4 4 6-6a5 5 0 0 0 6-6l-3 3-4-4 3-3z"></path></svg></span><span><b>Taller propio desde 1989</b><span>Cada equipo se revisa antes de salir</span></span></div>
+<div class="tr"><span><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="30"><path d="M2 5h20v14H2z M2 9h20 M5 15h5"></path></svg></span><span><b>Tarjeta o efectivo</b><span>Visa, Mastercard, Diners, Discover, JCB</span></span></div>
+</div></section><section class="blk sup" id="categorias"><div class="in">
+<div class="bhead">
+<div><h3>Comprar por categoría</h3><p>Encontrá lo que necesitás para cada espacio de tu hogar</p></div>
+<a href="#catalogoCompleto">Ver todas las categorías →</a>
+</div>
+<div class="cats"><a class="cat" href="https://www.mundiofertas.net/Categoria/191/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-688bdcc769989.png"/></span><b>Refrigeración</b></a><a class="cat" href="https://www.mundiofertas.net/Categoria/4/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a80b777dabe8.png"/></span><b>Camas y colchones</b></a><a class="cat" href="https://www.mundiofertas.net/Categoria/38440/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-68499c81e3586.jpg"/></span><b>Línea blanca</b></a><a class="cat" href="https://www.mundiofertas.net/Categoria/28/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-68796fa090ac6.jpg"/></span><b>Mueblería</b></a><a class="cat" href="https://www.mundiofertas.net/Categoria/13/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-686c08bb6f4b3.png"/></span><b>Estufas y hornos</b></a><a class="cat" href="https://www.mundiofertas.net/Categoria/8/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-684773eb7f4f2.png"/></span><b>Para tu negocio</b></a><a class="cat" href="https://www.mundiofertas.net/Categoria/1/" rel="noopener" target="_blank"><span class="ci"><img alt="" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a1da060dbdf6.png"/></span><b>Aires acondicionados</b></a></div><details class="catalog-expand" id="catalogoCompleto"><summary>Ver todas las categorías y subcategorías <span aria-hidden="true">⌄</span></summary><p class="category-hint">Explorá los productos en la tienda oficial de Mundi Ofertas.</p><div class="category-groups"><details class="category-group"><summary>Accesorios de casa</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/32979/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/32980/" rel="noopener noreferrer" target="_blank">Accesorios de casa ↗</a></li></ul></details><details class="category-group"><summary>Accesorios y mas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/29607/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29608/" rel="noopener noreferrer" target="_blank">Accesorios ↗</a></li></ul></details><details class="category-group"><summary>Aires acondicionados</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/1/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/12315/" rel="noopener noreferrer" target="_blank">Mini split ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/3/" rel="noopener noreferrer" target="_blank">Aires de ventana ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/2/" rel="noopener noreferrer" target="_blank">Mini split ↗</a></li></ul></details><details class="category-group"><summary>Camas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/4/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38443/" rel="noopener noreferrer" target="_blank">Accesorios de cama ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29606/" rel="noopener noreferrer" target="_blank">Almohadas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/5/" rel="noopener noreferrer" target="_blank">Camas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/6/" rel="noopener noreferrer" target="_blank">Accesorios de cama ↗</a></li></ul></details><details class="category-group"><summary>Congeladores y enfriadores</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/7/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/10/" rel="noopener noreferrer" target="_blank">Congeladores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/8/" rel="noopener noreferrer" target="_blank">Vitrinas refrigerantes ↗</a></li></ul></details><details class="category-group"><summary>Electronica</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/11/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/12/" rel="noopener noreferrer" target="_blank">Televisores ↗</a></li></ul></details><details class="category-group"><summary>Estufas</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/13/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/17/" rel="noopener noreferrer" target="_blank">Estufa electrica mesa ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/44/" rel="noopener noreferrer" target="_blank">Estufa electrica grande ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/16/" rel="noopener noreferrer" target="_blank">Estufas de gas mesa ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/14/" rel="noopener noreferrer" target="_blank">Estufas de gas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/15/" rel="noopener noreferrer" target="_blank">Estufas semi industriales ↗</a></li></ul></details><details class="category-group"><summary>Hogar y electronica</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/18/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/22/" rel="noopener noreferrer" target="_blank">Enfriadores de agua ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/21/" rel="noopener noreferrer" target="_blank">Hornos electricos ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/45/" rel="noopener noreferrer" target="_blank">Licuadoras ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/19/" rel="noopener noreferrer" target="_blank">Microondas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/39084/" rel="noopener noreferrer" target="_blank">Percoladoras de café ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/20/" rel="noopener noreferrer" target="_blank">Planchas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/27/" rel="noopener noreferrer" target="_blank">Ventiladores ↗</a></li></ul></details><details class="category-group"><summary>Lavadoras</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/38440/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38441/" rel="noopener noreferrer" target="_blank">Lavadoras nuevas ↗</a></li></ul></details><details class="category-group"><summary>Muebleria</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/28/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35/" rel="noopener noreferrer" target="_blank">Alacenas ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/42403/" rel="noopener noreferrer" target="_blank">Alacenas y estantes ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/39741/" rel="noopener noreferrer" target="_blank">Bufeteras ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/30/" rel="noopener noreferrer" target="_blank">Roperos ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/31/" rel="noopener noreferrer" target="_blank">Centros de entretenimiento ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/32/" rel="noopener noreferrer" target="_blank">Comedores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38/" rel="noopener noreferrer" target="_blank">Comedores ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/38438/" rel="noopener noreferrer" target="_blank">Comodas / tocadores de madera ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/42402/" rel="noopener noreferrer" target="_blank">Escritorios ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/29/" rel="noopener noreferrer" target="_blank">Juegos de sala ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/36/" rel="noopener noreferrer" target="_blank">Mesas de vidrio ↗</a></li></ul></details><details class="category-group"><summary>N-lavadora nueva</summary><ul><li><a class="category-all" href="https://www.mundiofertas.net/Categoria/35248/" rel="noopener noreferrer" target="_blank">Ver toda la categoría ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35249/" rel="noopener noreferrer" target="_blank">LAVADORA 17 KG (A+) "WHIRLPOOL" 12 CICLOS BLANCA #8MWTW1713 ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35250/" rel="noopener noreferrer" target="_blank">LAVADORA 16 KG (A+) "GRS" CARGA SUPERIOR BLANCA #LAV16-CS2-TV-W ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35251/" rel="noopener noreferrer" target="_blank">LAVADORA 18KG (A+) "MABE" DIFUNSOR BLANCA #LMA78113CBAB0 ↗</a></li><li><a href="https://www.mundiofertas.net/Categoria/35252/" rel="noopener noreferrer" target="_blank">LAVADORA 20 KG (A+) "GRS" BLANCA AUTOMATICA TAPA PLASTICO/VIDRIO #LAV20-CS2-TV-W ↗</a></li></ul></details></div></details>
 </div></section>
-
 <section class="blk" id="ofertas"><div class="in">
-  <div class="bhead">
-    <div><h3>Ofertas de la semana</h3><p>Encontrá tu próximo favorito para la casa</p></div>
-    <a href="#ofertas">Deslizá para ver más →</a>
-  </div>
-  <div class="product-slider"><button class="slider-arrow prev" data-track="gridOfertas" data-dir="-1" aria-label="Ofertas anteriores">‹</button><div class="grid product-track" id="gridOfertas" tabindex="0" aria-label="Productos en oferta"></div><button class="slider-arrow next" data-track="gridOfertas" data-dir="1" aria-label="Más ofertas">›</button></div>
+<div class="bhead">
+<div><h3>Ofertas de la semana</h3><p>Encontrá tu próximo favorito para la casa</p></div>
+<a href="#ofertas">Deslizá para ver más →</a>
+</div>
+<div class="product-slider"><button aria-label="Ofertas anteriores" class="slider-arrow prev" data-dir="-1" data-track="gridOfertas">‹</button><div aria-label="Productos en oferta" class="grid product-track" id="gridOfertas" tabindex="0"></div><button aria-label="Más ofertas" class="slider-arrow next" data-dir="1" data-track="gridOfertas">›</button></div>
 </div></section>
-
-<section class="blk" style="padding-top:0"><div class="in">
-  <div class="bigb">
-    <div class="bt">
-      <h3>Quincena de refrigeración</h3>
-      <p>Vitrinas, congeladores y enfriadores hasta 20% abajo, con instalación incluida en San Pedro Sula y Villanueva.</p>
-      <div><a class="btn" style="background:#fff;color:var(--primario)" href="#negocio">Ver la promoción</a></div>
-    </div>
-    <div class="bi"><img src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a679403e4b27.jpeg" alt="Vitrina vertical no frost" onerror="this.style.display='none'"></div>
-  </div>
-  <div class="bdoble">
-    <div class="bhalf" style="background:var(--azul)">
-      <h4>Estrená cama este mes</h4>
-      <span>Matrimoniales desde L 3,190 con base reforzada</span>
-      <div style="margin-top:15px"><a class="btn g" href="#ofertas">Ver camas</a></div>
-    </div>
-    <div class="bhalf" style="background:var(--azul-med)">
-      <h4>Americanos con garantía</h4>
-      <span>Whirlpool, Kenmore y Frigidaire revisados en taller</span>
-      <div style="margin-top:15px"><a class="btn g" href="#americanos">Ver línea americana</a></div>
-    </div>
-  </div>
+<section class="blk promo-section" style="padding-top:0"><div class="in promo-pair"><article class="promo-tile cool"><div><h3>Quincena de refrigeración</h3><p>Vitrinas y enfriadores para equipar tu negocio.</p><a class="btn p" href="#negocio">Ver promoción →</a></div><img alt="Vitrina refrigerante GPlus" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a679725939da.png"/></article><article class="promo-tile rest"><div><h3>Descanso que te renueva.</h3><p>Camas y colchones para tus mejores noches.</p><button class="btn p" onclick="verProducto('camaFac')">Ver camas →</button></div><img alt="Cama Facenco Extraflex" loading="lazy" src="https://www.mundiofertas.net/archivos/multimedia/Productos/L02D00064/1.png"/></article></div></section>
+<section class="blk" hidden=""><div class="in">
+<div class="bhead">
+<div><h3>Mirá los productos en video</h3><p>Lo que publicamos cada semana, con el producto y el precio enlazados</p></div>
+<a href="#">Seguirnos en @mundiofertas_hn →</a>
+</div>
+<div class="reels" id="gridReels"></div>
 </div></section>
-
-<section class="blk sup" id="categorias"><div class="in">
-  <div class="bhead">
-    <div><h3>Comprar por categoría</h3><p>Encontrá lo que necesitás para cada espacio de tu hogar</p></div>
-    <a href="#ofertas">Explorar ofertas →</a>
-  </div>
-  <details class="catalog-expand"><summary>Ver todas las categorías y subcategorías <span aria-hidden="true">⌄</span></summary><p class="category-hint">Explorá los productos en la tienda oficial de Mundi Ofertas.</p><div class="category-groups"><details class="category-group"><summary>Accesorios de casa</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32979/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32980/">Accesorios de casa ↗</a></li></ul></details><details class="category-group"><summary>Accesorios y mas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29607/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29608/">Accesorios ↗</a></li></ul></details><details class="category-group"><summary>Aires acondicionados</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/1/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/12315/">Mini split ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/3/">Aires de ventana ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/2/">Mini split ↗</a></li></ul></details><details class="category-group"><summary>Camas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/4/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38443/">Accesorios de cama ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29606/">Almohadas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/5/">Camas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/6/">Accesorios de cama ↗</a></li></ul></details><details class="category-group"><summary>Congeladores y enfriadores</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/7/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/10/">Congeladores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/8/">Vitrinas refrigerantes ↗</a></li></ul></details><details class="category-group"><summary>Electronica</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/11/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/12/">Televisores ↗</a></li></ul></details><details class="category-group"><summary>Estufas</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/13/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/17/">Estufa electrica mesa ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/44/">Estufa electrica grande ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/16/">Estufas de gas mesa ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/14/">Estufas de gas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/15/">Estufas semi industriales ↗</a></li></ul></details><details class="category-group"><summary>Hogar y electronica</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/18/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/22/">Enfriadores de agua ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/21/">Hornos electricos ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/45/">Licuadoras ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/19/">Microondas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/39084/">Percoladoras de café ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/20/">Planchas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/27/">Ventiladores ↗</a></li></ul></details><details class="category-group"><summary>Lavadoras</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38440/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38441/">Lavadoras nuevas ↗</a></li></ul></details><details class="category-group"><summary>Muebleria</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/28/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35/">Alacenas ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/42403/">Alacenas y estantes ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/39741/">Bufeteras ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/30/">Roperos ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/31/">Centros de entretenimiento ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/32/">Comedores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38/">Comedores ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/38438/">Comodas / tocadores de madera ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/42402/">Escritorios ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/29/">Juegos de sala ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/36/">Mesas de vidrio ↗</a></li></ul></details><details class="category-group"><summary>N-lavadora nueva</summary><ul><li><a class="category-all" target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35248/">Ver toda la categoría ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35249/">LAVADORA 17 KG (A+) &quot;WHIRLPOOL&quot; 12 CICLOS BLANCA #8MWTW1713 ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35250/">LAVADORA 16 KG (A+) &quot;GRS&quot; CARGA SUPERIOR BLANCA #LAV16-CS2-TV-W ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35251/">LAVADORA 18KG (A+) &quot;MABE&quot; DIFUNSOR BLANCA #LMA78113CBAB0 ↗</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.mundiofertas.net/Categoria/35252/">LAVADORA 20 KG (A+) &quot;GRS&quot; BLANCA AUTOMATICA TAPA PLASTICO/VIDRIO #LAV20-CS2-TV-W ↗</a></li></ul></details></div></details>
-  <div class="cats">
-    <a class="cat" href="#ofertas"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Categorias/imagen-69cc43b1379bd.png" alt="" onerror="this.style.display='none'"></span><b>Camas y colchones</b></a>
-    <a class="cat" href="#ofertas"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Categorias/imagen-69cc4362c1646.png" alt="" onerror="this.style.display='none'"></span><b>Mueblería</b></a>
-    <a class="cat" href="#ofertas"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Categorias/imagen-69cc433b3bbc0.png" alt="" onerror="this.style.display='none'"></span><b>Estufas y hornos</b></a>
-    <a class="cat" href="#negocio"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Categorias/imagen-69cc43f417925.png" alt="" onerror="this.style.display='none'"></span><b>Congeladores</b></a>
-    <a class="cat" href="#negocio"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Categorias/imagen-69cc43c7b2349.png" alt="" onerror="this.style.display='none'"></span><b>Refrigeración comercial</b></a>
-    <a class="cat" href="#ofertas"><span class="ci"><img src="https://www.mundiofertas.net/archivos/multimedia/Productos/imagen-6a1da060dbdf6.png" alt="" onerror="this.style.display='none'"></span><b>Aires acondicionados</b></a>
-  </div>
+<section class="blk brands-section" id="marcas"><div class="in">
+<div class="bhead"><div><h3>Marcas que manejamos</h3></div></div>
+<div class="brands">
+<img alt="Whirlpool" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/whirlpool.jpg"/>
+<img alt="Frigidaire" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/Frigidaire.jpg"/>
+<img alt="Oster" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/Oster.jpg"/>
+<img alt="Sankey" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/Sankey.jpg"/>
+<img alt="GRS" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/GRS.jpg"/>
+<img alt="Kingmaster" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/imagen-5ea5e0711ddb3.jpg"/>
+<img alt="American Cool" onerror="this.style.display='none'" src="https://www.mundiofertas.net/archivos/multimedia/Marcas/imagen-5ea5e43396b26.jpg"/>
+</div>
 </div></section>
-
-<section class="cond" id="americanos"><div class="in">
-  <h3>Nuevo o americano revisado. Los dos con garantía.</h3>
-  <p class="lead">Mundiofertas importa electrodomésticos americanos ligeramente usados desde 1995 y vende línea nueva por departamentos. Cada producto lleva su sello, y el sello significa siempre lo mismo.</p>
-  <div class="cbox a">
-    <span class="lbl">NUEVO</span>
-    <h4>Producto de fábrica</h4>
-    <ul><li>En caja, sin uso previo</li><li>Garantía del fabricante respaldada por la tienda</li><li>Factura y manual incluidos</li></ul>
-  </div>
-  <div class="cbox b">
-    <span class="lbl">AMERICANO REVISADO</span>
-    <h4>Importado y probado en taller propio</h4>
-    <ul>
-      <li>Marcas americanas ligeramente usadas: Whirlpool, Kenmore, Frigidaire</li>
-      <li>Revisado y probado por nuestro servicio técnico antes de la venta</li>
-      <li>Estado declarado en la ficha, con fotos del equipo real</li>
-      <li>Garantía escrita de la tienda y repuestos disponibles</li>
-    </ul>
-  </div>
+<section class="history-invite" hidden=""><div class="in"><div><span class="eyebrow">CON VOS DESDE 1989</span><h2>Una historia que sigue creciendo.</h2><p>Conocé cómo empezamos y qué nos mueve a acompañarte en cada etapa de tu hogar.</p></div><a class="btn p" href="historia.html" rel="noopener" target="_blank">Conocé nuestra historia ↗</a></div></section>
+<section aria-labelledby="locations-title" class="store-locations" id="ubicaciones"><div class="in">
+<div class="section-heading"><h2 id="locations-title">Nuestras tiendas</h2><p>Visitanos y encontrá lo que tu hogar necesita.</p></div>
+<div class="locations-layout">
+<div class="map-panel"><div aria-label="Mapa de tiendas Mundi Ofertas en Cortés" id="storeMap" role="region"><p class="map-fallback">Cargando mapa… También podés usar los enlaces de cada tienda.</p></div><div class="map-caption"><span class="demo-map-label">MAPA DEMO</span><span>Villanueva y Choloma: puntos de referencia aproximados.</span></div></div>
+<div class="location-cards">
+<article class="location-card"><span aria-hidden="true" class="location-icon">⌖</span><div><button class="store-focus" data-store="villanueva">Villanueva</button><p>Sobre el boulevard principal de la CA-5, a la par de Popeyes y Autorepuestos.</p><a href="https://maps.app.goo.gl/5xutEbXc8fwufgaG9?g_st=aw" rel="noopener noreferrer" target="_blank">Cómo llegar ↗</a></div></article>
+<article class="location-card"><span aria-hidden="true" class="location-icon">⌖</span><div><button class="store-focus" data-store="sps">San Pedro Sula</button><p>Bo. El Benque, 7 calle y 8 avenida, a una cuadra del Hospital Leonardo Martínez.</p><a href="https://goo.gl/maps/nLYeeZ4ikxT9iuoH6" rel="noopener noreferrer" target="_blank">Cómo llegar ↗</a></div></article>
+<article class="location-card"><span aria-hidden="true" class="location-icon">⌖</span><div><button class="store-focus" data-store="choloma">Choloma</button><p>Boulevard hacia Puerto Cortés, atrás de Popeyes.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Mundiofertas+Choloma+Honduras" rel="noopener noreferrer" target="_blank">Buscar ubicación ↗</a></div></article>
+</div>
+</div>
 </div></section>
-
-<section class="blk"><div class="in">
-  <div class="bhead">
-    <div><h3>Mirá los productos en video</h3><p>Lo que publicamos cada semana, con el producto y el precio enlazados</p></div>
-    <a href="#">Seguirnos en @mundiofertas_hn →</a>
-  </div>
-  <div class="reels" id="gridReels"></div>
-</div></section>
-
-<section class="blk sup" id="negocio"><div class="in">
-  <div class="bhead">
-    <div><h3>Para tu negocio</h3><p>Vitrinas, congeladores y estufas semi-industriales para pulperías, comedores y cafeterías</p></div>
-    <a href="#" onclick="wa('vitrina46');return false">Cotizar por WhatsApp →</a>
-  </div>
-  <div class="grid g3" id="gridNegocio"></div>
-</div></section>
-
-<section class="blk"><div class="in">
-  <div class="bhead"><div><h3>Marcas que manejamos</h3></div></div>
-  <div class="brands">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/whirlpool.jpg" alt="Whirlpool" onerror="this.style.display='none'">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/Frigidaire.jpg" alt="Frigidaire" onerror="this.style.display='none'">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/Oster.jpg" alt="Oster" onerror="this.style.display='none'">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/Sankey.jpg" alt="Sankey" onerror="this.style.display='none'">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/GRS.jpg" alt="GRS" onerror="this.style.display='none'">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/imagen-5ea5e0711ddb3.jpg" alt="Kingmaster" onerror="this.style.display='none'">
-    <img src="https://www.mundiofertas.net/archivos/multimedia/Marcas/imagen-5ea5e43396b26.jpg" alt="American Cool" onerror="this.style.display='none'">
-  </div>
-</div></section>
-
-
-<section class="history-invite"><div class="in"><div><span class="eyebrow">CON VOS DESDE 1989</span><h2>Una historia que sigue creciendo.</h2><p>Conocé cómo empezamos y qué nos mueve a acompañarte en cada etapa de tu hogar.</p></div><a class="btn p" href="historia.html" target="_blank" rel="noopener">Conocé nuestra historia ↗</a></div></section>
-<section class="store-locations" id="ubicaciones" aria-labelledby="locations-title"><div class="in">
-  <div class="section-heading"><span class="eyebrow">SIEMPRE CERCA DE VOS</span><h2 id="locations-title">¿Dónde estamos?</h2><p>Visitá Mundi Ofertas y encontrá lo que tu hogar necesita.</p></div>
-  <div class="locations-layout">
-    <div class="map-panel"><div id="storeMap" role="region" aria-label="Mapa de tiendas Mundi Ofertas en Cortés"><p class="map-fallback">Cargando mapa… También podés usar los enlaces de cada tienda.</p></div><div class="map-caption"><span class="demo-map-label">MAPA DEMO</span><span>Villanueva y Choloma: puntos de referencia aproximados.</span></div></div>
-    <div class="location-cards">
-      <article class="location-card"><span class="location-icon" aria-hidden="true">⌖</span><div><button class="store-focus" data-store="villanueva">Villanueva</button><p>Sobre el boulevard principal de la CA-5, a la par de Popeyes y Autorepuestos.</p><a href="https://maps.app.goo.gl/5xutEbXc8fwufgaG9?g_st=aw" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a></div></article>
-      <article class="location-card"><span class="location-icon" aria-hidden="true">⌖</span><div><button class="store-focus" data-store="sps">San Pedro Sula</button><p>Bo. El Benque, 7 calle y 8 avenida, a una cuadra del Hospital Leonardo Martínez.</p><a href="https://goo.gl/maps/nLYeeZ4ikxT9iuoH6" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a></div></article>
-      <article class="location-card"><span class="location-icon" aria-hidden="true">⌖</span><div><button class="store-focus" data-store="choloma">Choloma</button><p>Boulevard hacia Puerto Cortés, atrás de Popeyes.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Mundiofertas+Choloma+Honduras" target="_blank" rel="noopener noreferrer">Buscar ubicación ↗</a></div></article>
-    </div>
-  </div>
-</div></section>
-
-</main>
-
+<details class="extra-department" id="americanos"><summary>Americanos revisados: conocé nuestra garantía</summary><section class="cond"><div class="in">
+<h3>Nuevo o americano revisado. Los dos con garantía.</h3>
+<p class="lead">Mundiofertas importa electrodomésticos americanos ligeramente usados desde 1995 y vende línea nueva por departamentos. Cada producto lleva su sello, y el sello significa siempre lo mismo.</p>
+<div class="cbox a">
+<span class="lbl">NUEVO</span>
+<h4>Producto de fábrica</h4>
+<ul><li>En caja, sin uso previo</li><li>Garantía del fabricante respaldada por la tienda</li><li>Factura y manual incluidos</li></ul>
+</div>
+<div class="cbox b">
+<span class="lbl">AMERICANO REVISADO</span>
+<h4>Importado y probado en taller propio</h4>
+<ul>
+<li>Marcas americanas ligeramente usadas: Whirlpool, Kenmore, Frigidaire</li>
+<li>Revisado y probado por nuestro servicio técnico antes de la venta</li>
+<li>Estado declarado en la ficha, con fotos del equipo real</li>
+<li>Garantía escrita de la tienda y repuestos disponibles</li>
+</ul>
+</div>
+</div></section></details><details class="extra-department" id="negocio"><summary>Más productos para tu negocio</summary><section class="blk sup"><div class="in">
+<div class="bhead">
+<div><h3>Para tu negocio</h3><p>Vitrinas, congeladores y estufas semi-industriales para pulperías, comedores y cafeterías</p></div>
+<a href="#" onclick="wa('vitrina46');return false">Cotizar por WhatsApp →</a>
+</div>
+<div class="grid g3" id="gridNegocio"></div>
+</div></section></details></main>
 <!-- ============ VISTA: FICHA DE PRODUCTO ============ -->
-<main id="pdp" class="hide"><div class="in">
-  <div class="crumb"><a href="#" onclick="irHome();return false">Inicio</a> › <span id="cCat"></span> › <span id="cNom"></span></div>
-  <div class="pdp">
-    <div class="gal">
-      <div class="main"><img id="galMain" src="" alt="" onerror="this.style.display='none'"></div>
-      <div class="thumbs" id="galThumbs"></div>
-    </div>
-    <div class="pinfo">
-      <div class="pmark" id="pMarca"></div>
-      <h1 id="pNombre"></h1>
-      <div class="pbadges" id="pBadges"></div>
-      <div class="pblock">
-        <div><span class="now" id="pNow"></span><span class="was" id="pWas"></span></div>
-        <div class="sv" id="pSave"></div>
-        <div class="cuo" id="pCuota"></div>
-      </div>
-      <div class="pstock"><i></i><span id="pStock"></span></div>
-      <div class="pactions">
-        <button class="btn p" id="pAdd">Agregar al carrito</button>
-        <button class="btn wa" id="pWa">Preguntar por WhatsApp</button>
-      </div>
-      <ul class="pfeat" id="pFeat"></ul>
-    </div>
-  </div>
-  <div class="spec">
-    <h3>Ficha técnica</h3>
-    <table class="sp" id="pSpec"></table>
-  </div>
-  <div class="blk"><div class="bhead"><div><h3>También te puede servir</h3></div></div>
-    <div class="grid" id="gridRel"></div></div>
+<main class="hide" id="pdp"><div class="in">
+<div class="crumb"><a href="#" onclick="irHome();return false">Inicio</a> › <span id="cCat"></span> › <span id="cNom"></span></div>
+<div class="pdp">
+<div class="gal">
+<div class="main"><img alt="" id="galMain" onerror="this.style.display='none'" src=""/></div>
+<div class="thumbs" id="galThumbs"></div>
+</div>
+<div class="pinfo">
+<div class="pmark" id="pMarca"></div>
+<h1 id="pNombre"></h1>
+<div class="pbadges" id="pBadges"></div>
+<div class="pblock">
+<div><span class="now" id="pNow"></span><span class="was" id="pWas"></span></div>
+<div class="sv" id="pSave"></div>
+<div class="cuo" id="pCuota"></div>
+</div>
+<div class="pstock"><i></i><span id="pStock"></span></div>
+<div class="pactions">
+<button class="btn p" id="pAdd">Agregar al carrito</button>
+<button class="btn wa" id="pWa">Preguntar por WhatsApp</button>
+</div>
+<ul class="pfeat" id="pFeat"></ul>
+</div>
+</div>
+<div class="spec">
+<h3>Ficha técnica</h3>
+<table class="sp" id="pSpec"></table>
+</div>
+<div class="blk"><div class="bhead"><div><h3>También te puede servir</h3></div></div>
+<div class="grid" id="gridRel"></div></div>
 </div></main>
-
 <!-- ============ CARRITO ============ -->
 <div class="drawershade" id="dshade"></div>
-<aside class="drawer" id="drawer" aria-label="Carrito de compras">
-  <div class="dh"><h3>Tu carrito</h3><button class="dx" id="dclose" aria-label="Cerrar">×</button></div>
-  <div class="db" id="dbody"></div>
-  <div class="df" id="dfoot"></div>
+<aside aria-label="Carrito de compras" class="drawer" id="drawer">
+<div class="dh"><h3>Tu carrito</h3><button aria-label="Cerrar" class="dx" id="dclose">×</button></div>
+<div class="db" id="dbody"></div>
+<div class="df" id="dfoot"></div>
 </aside>
-
 <!-- ============ VISTA: CHECKOUT ============ -->
-<main id="checkout" class="hide"><div class="co">
-  <div class="steps">
-    <div id="s1">1 · Entrega</div>
-    <div id="s2">2 · Tus datos</div>
-    <div id="s3">3 · Pago</div>
-    <div id="s4">4 · Listo</div>
-  </div>
-  <div id="coBody"></div>
+<main class="hide" id="checkout"><div class="co">
+<div class="steps">
+<div id="s1">1 · Entrega</div>
+<div id="s2">2 · Tus datos</div>
+<div id="s3">3 · Pago</div>
+<div id="s4">4 · Listo</div>
+</div>
+<div id="coBody"></div>
 </div></main>
-
 <footer class="site" id="pie"><div class="in">
-  <div>
-    <img class="flogo" src="assets/logo.png" alt="Mundiofertas" onerror="this.style.display='none'">
-    <p style="margin:0">Desde 1989 acompañando a los hogares hondureños con electrodomésticos. Importación americana desde 1995 y línea nueva, con taller propio, garantía escrita y precios justos.</p>
-    <div class="pays"><i></i><i></i><i></i><i></i><i></i></div>
-  </div>
-  <div>
-    <h5>Tiendas</h5>
-    <div class="store"><b>San Pedro Sula</b>Bo. El Benque, 7 calle 8 avenida<br><a href="#ubicaciones">Cómo llegar</a></div>
-    <div class="store"><b>Villanueva</b>Bulevar CA-5, a la par de Popeyes<br><a href="#ubicaciones">Cómo llegar</a></div>
-  </div>
-  <div><h5>Comprar</h5>
-    <ul><li><a href="#ofertas">Ofertas</a></li><li><a href="#americanos">Americanos revisados</a></li>
-    <li><a href="#negocio">Para tu negocio</a></li><li><a href="#">Marcas</a></li><li><a href="#">Mi cuenta</a></li></ul></div>
-  <div><h5>Ayuda</h5>
-    <ul><li><a href="#">Políticas de envío</a></li><li><a href="#">Políticas de garantía</a></li>
-    <li><a href="#">Preguntas frecuentes</a></li><li><a href="#">Contáctenos</a></li>
-    <li><a href="#">WhatsApp 3267-7622</a></li></ul></div>
-  <div class="legal">Mundiofertas, S.A. © 2026 · Todos los derechos reservados · Página de prueba</div>
-</div></footer>
-
-<a class="wafloat" href="#" onclick="return false">💬 <span>Escribinos</span></a>
+<div>
+<img alt="Mundiofertas" class="flogo" onerror="this.style.display='none'" src="assets/logo.png"/>
+<p style="margin:0">Desde 1989 acompañando a los hogares hondureños con electrodomésticos. Importación americana desde 1995 y línea nueva, con taller propio, garantía escrita y precios justos.</p>
+<div class="pays"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+<div>
+<h5>Tiendas</h5>
+<div class="store"><b>San Pedro Sula</b>Bo. El Benque, 7 calle 8 avenida<br/><a href="#ubicaciones">Cómo llegar</a></div>
+<div class="store"><b>Villanueva</b>Bulevar CA-5, a la par de Popeyes<br/><a href="#ubicaciones">Cómo llegar</a></div>
+</div>
+<div><h5>Comprar</h5>
+<ul><li><a href="#ofertas">Ofertas</a></li><li><a href="#americanos">Americanos revisados</a></li>
+<li><a href="#negocio">Para tu negocio</a></li><li><a href="#marcas">Marcas</a></li><li><a href="#">Mi cuenta</a></li></ul></div>
+<div><h5>Ayuda</h5>
+<ul><li><a href="#">Políticas de envío</a></li><li><a href="#">Políticas de garantía</a></li>
+<li><a href="#">Preguntas frecuentes</a></li><li><a href="#">Contáctenos</a></li>
+<li><a href="#">WhatsApp 3267-7622</a></li></ul></div>
+<div class="legal">Mundiofertas, S.A. © 2026 · Todos los derechos reservados · Página de prueba</div>
+<div class="demobar">Página de prueba — Mundiofertas · Los precios y productos son reales del catálogo actual. Es una demostración navegable, no la tienda en producción.</div></div></footer>
+<a class="wafloat" href="#" onclick="aviso('WhatsApp: +504 3267-7622');return false">💬 <span>Escribinos por WhatsApp</span></a>
 <div class="toast" id="toast"></div>
-
 <script>
 /* ===================== CATÁLOGO DE PRUEBA ===================== */
 const P = {
@@ -824,7 +760,7 @@ function tarjeta(k){
     </div></article>`;
 }
 document.getElementById("gridOfertas").innerHTML =
-  ["minisplit","vitrina40","vitrina46","camaMat","ropero","comedorE","camaUni"].map(tarjeta).join("");
+  ["minisplit","vitrina40","camaFac","vitrina46","camaMat","ropero","comedorE","camaUni"].map(tarjeta).join("");
 document.getElementById("gridNegocio").innerHTML =
   ["vitrina46","comedorD","camaFac"].map(tarjeta).join("");
 

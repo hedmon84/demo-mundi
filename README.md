@@ -53,3 +53,11 @@ San Pedro Sula usa las coordenadas del enlace oficial. Villanueva y Choloma tien
 - Categorías: 11 grupos y 40 subcategorías tomados del menú oficial el 23/09/2026. `assets/categories.json` conserva nombres y URLs de origen, incluidos nombres repetidos con destinos distintos. Los enlaces abren la tienda oficial en otra pestaña. Menús desplegables disponibles en escritorio, móvil y la sección de categorías.
 - Carrusel principal: avance cada 6 segundos, pausa/reanudación, pausa al interactuar o pasar el cursor; respeta movimiento reducido y no avanza cuando está fuera de pantalla o la pestaña está oculta.
 - Logos de marcas ampliados, a color, con adaptación a celular.
+
+## Diseño de referencia — 25 de septiembre
+
+Portada adaptada a la referencia del cliente: banner completo con rotación cada seis segundos, beneficios, siete categorías visuales, tres ofertas por fila en escritorio, dos promociones, marcas y mapa compacto. El carrito, categorías desplegables e historia independiente se conservan. Las fotos de producto proceden del catálogo oficial; no se inventan fotos de sucursales.
+
+Estilos: `assets/reference-layout.css`. Fondo generado con la herramienta integrada ImageGen: `assets/hero-tropical.png`. Prompt: “Photorealistic wide 3:1 website banner background. Modern bright tropical Honduran home, pale stone floor, tall glass windows on right revealing palms and blue sky. Left 45 percent deep ocean blue wall, empty space for white text. Right 55 percent sunlit neutral architecture, empty floor for real appliance overlays. Blue and white palette. No text, logos, appliances or people.”
+
+Validación: inspección visual de escritorio y móvil de 390 px, sin desbordamientos ni imágenes rotas; agregar al carrito y menú móvil comprobados; validación sintáctica de JavaScript.

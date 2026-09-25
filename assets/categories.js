@@ -9,3 +9,5 @@ document.addEventListener('focusin',e=>{if(!panel.hidden&&!panel.contains(e.targ
 matchMedia('(max-width:860px)').addEventListener('change',()=>close());
 document.querySelectorAll('.category-group').forEach(d=>d.addEventListener('toggle',()=>{if(d.open){d.parentElement.querySelectorAll('.category-group').forEach(other=>{if(other!==d)other.open=false;});}}));
 })();
+/* Open linked catalog/department disclosures before scrolling into them. */
+document.querySelectorAll('a[href="#catalogoCompleto"],a[href="#negocio"],a[href="#americanos"]').forEach(a=>a.addEventListener('click',()=>{const target=document.querySelector(a.getAttribute('href'));if(target&&target.tagName==='DETAILS')target.open=true;}));
