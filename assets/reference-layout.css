@@ -29,3 +29,5 @@ footer.site{padding:36px 0 22px}
 .cadd{display:flex;align-items:center;justify-content:center;gap:9px;border-radius:6px}.cadd .cart-ic{flex:none}
 .wafloat{background:#2E9E58!important;border-radius:14px!important;padding:8px 18px 8px 12px!important;gap:10px!important;font-size:12px!important;line-height:1.2;box-shadow:0 6px 18px #2E9E5840!important}.wafloat span{font-weight:700;text-align:left}
 @media(max-width:560px){.wafloat span{display:none}.wafloat{padding:10px!important;border-radius:50%!important}}
+
+.slider-arrow{display:flex!important;align-items:center;justify-content:center;padding:0!important;line-height:1}.slider-arrow svg{display:block}
