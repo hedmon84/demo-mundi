@@ -1256,11 +1256,11 @@ const CATS = [...document.querySelectorAll("#categorias .cat")].map(a => ({
   img: a.querySelector("img").src,
   url: a.href
 }));
-const flt = {cat:"", marcas:new Set(), cond:new Set(), max:0, orden:"rel"};
+const flt = {cat:"", label:"", url:"", marcas:new Set(), cond:new Set(), max:0, orden:"rel"};
 const PRECIO_MAX = Math.ceil(Math.max(...Object.values(P).map(p=>p.p))/1000)*1000;
 function enCategoria(p, cat){ return !cat || (CAT_MATCH[cat]||[]).includes(p.c); }
-function abrirCategorias(cat){
-  flt.cat = cat || ""; flt.marcas.clear(); flt.cond.clear(); flt.max = PRECIO_MAX; flt.orden = "rel";
+function abrirCategorias(cat, label, url){
+  flt.cat = cat || ""; flt.label = label || ""; flt.url = url || ""; flt.marcas.clear(); flt.cond.clear(); flt.max = PRECIO_MAX; flt.orden = "rel";
   document.querySelectorAll("#catVista input[name=cond]").forEach(i=>i.checked=false);
   document.getElementById("fOrden").value = "rel";
   const r = document.getElementById("fPrecio"); r.min = 0; r.max = PRECIO_MAX; r.step = 500; r.value = PRECIO_MAX;
@@ -1268,10 +1268,12 @@ function abrirCategorias(cat){
 }
 function pintarCategorias(){
   const c = CATS.find(x=>x.name===flt.cat);
-  document.getElementById("catTitulo").textContent = c ? c.name : "Todas las categorías";
-  document.getElementById("catSub").textContent = c ? "Productos de esta categoría. Usá los filtros para afinar tu búsqueda." : "Explorá el catálogo y filtrá los productos.";
-  document.getElementById("catOficial").href = c ? c.url : "https://www.mundiofertas.net/";
-  document.getElementById("catStrip").innerHTML = `<button class="chip ${c?"":"on"}" data-c="">Todas</button>` + CATS.map(x=>`<button class="chip ${x.name===flt.cat?"on":""}" data-c="${x.name}"><img src="${x.img}" alt=""><span>${x.name}</span></button>`).join("");
+  const titulo = flt.label || (c ? c.name : (flt.cat || "Todas las categorías"));
+  document.getElementById("catTitulo").textContent = titulo;
+  document.getElementById("catSub").textContent = (c || flt.cat) ? "Productos de esta categoría. Usá los filtros para afinar tu búsqueda." : "Explorá el catálogo y filtrá los productos.";
+  const urlOf = flt.url || (c ? c.url : "https://www.mundiofertas.net/");
+  document.getElementById("catOficial").href = urlOf;
+  document.getElementById("catStrip").innerHTML = `<button class="chip ${flt.cat?"":"on"}" data-c="">Todas</button>` + CATS.map(x=>`<button class="chip ${x.name===flt.cat?"on":""}" data-c="${x.name}"><img src="${x.img}" alt=""><span>${x.name}</span></button>`).join("");
   const base = Object.keys(P).filter(k => enCategoria(P[k], flt.cat));
   document.getElementById("fCats").innerHTML = [{name:"",label:"Todas"}].concat(CATS.map(x=>({name:x.name,label:x.name}))).map(x=>{
     const n = Object.values(P).filter(p=>enCategoria(p,x.name)).length;
@@ -1295,22 +1297,22 @@ function pintarCategorias(){
   if(!lista.length){
     vacio.innerHTML = base.length
       ? '<b>No hay productos con esos filtros.</b><p>Probá quitando algún filtro.</p>'
-      : '<b>Aún no hay productos de esta categoría en la demo.</b><p>Podés verlos en la tienda oficial.</p><a class="btn p" href="'+(c?c.url:"https://www.mundiofertas.net/")+'" target="_blank" rel="noopener">Ver en mundiofertas.net →</a>';
+      : '<b>Aún no hay productos de esta categoría en la demo.</b><p>Podés verlos en la tienda oficial.</p><a class="btn p" href="'+urlOf+'" target="_blank" rel="noopener">Ver en mundiofertas.net →</a>';
   }
 }
 (() => {
   const v = document.getElementById("catVista");
-  v.addEventListener("click", e => { const b = e.target.closest(".chip"); if(b){ flt.cat = b.dataset.c; flt.marcas.clear(); pintarCategorias(); } });
+  v.addEventListener("click", e => { const b = e.target.closest(".chip"); if(b){ flt.cat = b.dataset.c; flt.label = flt.url = ""; flt.marcas.clear(); pintarCategorias(); } });
   v.addEventListener("change", e => {
     const t = e.target;
-    if(t.name==="fcat"){ flt.cat = t.value; flt.marcas.clear(); }
+    if(t.name==="fcat"){ flt.cat = t.value; flt.label = flt.url = ""; flt.marcas.clear(); }
     else if(t.name==="marca"){ t.checked ? flt.marcas.add(t.value) : flt.marcas.delete(t.value); }
     else if(t.name==="cond"){ t.checked ? flt.cond.add(t.value) : flt.cond.delete(t.value); }
     else if(t.id==="fOrden"){ flt.orden = t.value; }
     pintarCategorias();
   });
   document.getElementById("fPrecio").addEventListener("input", e => { flt.max = +e.target.value; pintarCategorias(); });
-  document.getElementById("fLimpiar").addEventListener("click", () => abrirCategorias(flt.cat));
+  document.getElementById("fLimpiar").addEventListener("click", () => abrirCategorias(flt.cat, flt.label, flt.url));
   document.addEventListener("click", e => {
     const a = e.target.closest("a"); if(!a) return;
     const dc = a.dataset.cat;
@@ -1321,6 +1323,20 @@ function pintarCategorias(){
 })();
 document.addEventListener("click", e => {
   const h = e.target.closest("a[data-home]"); if(h){ e.preventDefault(); mostrarVista("home"); history.replaceState(null,"",location.pathname); }
+});
+
+/* Menú "Todas las categorías": abrir la vista interna en lugar de la tienda oficial */
+const DD_MAP = [[/aires/i,"Aires acondicionados"],[/camas/i,"Camas y colchones"],[/congelad|enfriad/i,"Refrigeración"],[/estufa/i,"Estufas y hornos"],[/lavador/i,"Línea blanca"],[/muebler/i,"Mueblería"]];
+document.getElementById("categoryDropdown").addEventListener("click", e => {
+  const a = e.target.closest("a"); if(!a) return;
+  e.preventDefault();
+  const grupo = a.closest("details.category-group").querySelector("summary").textContent.trim();
+  const etiqueta = a.classList.contains("category-all") ? grupo : a.textContent.replace(/\s*↗\s*$/,"").trim();
+  const hit = DD_MAP.find(([re]) => re.test(grupo));
+  const cat = hit ? hit[1] : grupo;
+  document.getElementById("categoryDropdown").hidden = true;
+  document.getElementById("categoryToggle").setAttribute("aria-expanded","false");
+  abrirCategorias(cat, etiqueta, a.href);
 });
 </script>
 <script src="assets/storefront.js"></script>
