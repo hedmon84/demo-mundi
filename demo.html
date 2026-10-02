@@ -657,9 +657,8 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <main class="hide" id="checkout"><div class="co">
 <div class="steps">
 <div id="s1">1 · Entrega</div>
-<div id="s2">2 · Tus datos</div>
-<div id="s3">3 · Pago</div>
-<div id="s4">4 · Listo</div>
+<div id="s2">2 · Datos y pago</div>
+<div id="s3">3 · Listo</div>
 </div>
 <div id="coBody"></div>
 </div></main>
@@ -977,7 +976,7 @@ function mostrarPop(){
 
 /* ===================== CHECKOUT ===================== */
 function marcarPaso(n){
-  [1,2,3,4].forEach(i => {
+  [1,2,3].forEach(i => {
     const el = document.getElementById("s"+i);
     el.classList.toggle("on", i === n);
     el.classList.toggle("ok", i < n);
@@ -1091,7 +1090,7 @@ function validarEntrega(){
   pasoDatos();
 }
 
-/* --- Paso 2: datos --- */
+/* --- Paso 2: datos y pago --- */
 function pasoDatos(){
   marcarPaso(2);
   const dir = entrega === "envio";
@@ -1119,17 +1118,6 @@ function pasoDatos(){
       <h3>Retiro en tienda</h3>
       <p class="hint">Te escribimos por WhatsApp apenas el pedido esté listo. Llevá tu identidad y el número de pedido.</p>
     </div>`}
-    <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <button class="btn blue" onclick="pasoEntrega()">← Atrás</button>
-      <button class="btn p" onclick="pasoPago()">Continuar al pago</button>
-    </div>
-  </div>${resumenHTML()}</div>`;
-}
-
-/* --- Paso 3: pago --- */
-function pasoPago(){
-  marcarPaso(3);
-  document.getElementById("coBody").innerHTML = `<div class="colay"><div>
     <div class="box">
       <h3>¿Cómo querés pagar?</h3>
       <p class="hint">Todas las opciones generan tu factura con CAI.</p>
@@ -1149,12 +1137,21 @@ function pasoPago(){
       <div class="segpago"><i>🔒</i><span>Mundiofertas no recibe ni almacena los datos de tu tarjeta en ningún momento. La transacción viaja cifrada directo a Ficopago.</span></div>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <button class="btn blue" onclick="pasoDatos()">← Atrás</button>
+      <button class="btn blue" onclick="pasoEntrega()">← Atrás</button>
       <button class="btn p" onclick="confirmar()">Confirmar pedido por ${L(totalFinal())}</button>
     </div>
   </div>${resumenHTML()}</div>`;
 }
-function setPago(v){ metodoPago = v; pasoPago(); }
+
+function pasoPago(){ pasoDatos(); }
+function setPago(v){
+  metodoPago = v;
+  document.querySelectorAll("#coBody .opt").forEach(o => {
+    const on = o.getAttribute("onclick") === "setPago('" + v + "')";
+    o.classList.toggle("on", on);
+    o.querySelector("input").checked = on;
+  });
+}
 
 function confirmar(){
   if(!metodoPago){ aviso("Elegí una forma de pago"); return; }
@@ -1187,9 +1184,9 @@ function pantallaFico(){
   </div>`;
 }
 
-/* --- Paso 4: confirmación --- */
+/* --- Paso 3: confirmación --- */
 function pasoListo(){
-  marcarPaso(4);
+  marcarPaso(3);
   const num = "MO-" + Math.floor(100000 + Math.random() * 899999);
   const mp = {fico:"Tarjeta vía Ficopago — aprobado", tienda:"Pago en tienda al retirar", contra:"Pago contra entrega"}[metodoPago];
   const ent = entrega === "tienda"
