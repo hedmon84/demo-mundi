@@ -594,7 +594,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <!-- ============ VISTA: FICHA DE PRODUCTO ============ -->
 <main class="hide" id="catVista"><section class="blk catv"><div class="in">
 <a class="hx-back" href="#" data-home>← Volver a la tienda</a>
-<div class="bhead"><div><h3 id="catTitulo">Todas las categorías</h3><p id="catSub">Explorá el catálogo y filtrá los productos.</p></div><a id="catOficial" href="https://www.mundiofertas.net/" target="_blank" rel="noopener">Ver en mundiofertas.net →</a></div>
+<div class="bhead"><div><h3 id="catTitulo">Todas las categorías</h3><p id="catSub">Explorá el catálogo y filtrá los productos.</p></div></div>
 <div class="catstrip" id="catStrip"></div>
 <div class="catlayout">
 <aside class="filtros" aria-label="Filtros de productos">
@@ -1271,9 +1271,7 @@ function pintarCategorias(){
   const titulo = flt.label || (c ? c.name : (flt.cat || "Todas las categorías"));
   document.getElementById("catTitulo").textContent = titulo;
   document.getElementById("catSub").textContent = (c || flt.cat) ? "Productos de esta categoría. Usá los filtros para afinar tu búsqueda." : "Explorá el catálogo y filtrá los productos.";
-  const urlOf = flt.url || (c ? c.url : "https://www.mundiofertas.net/");
-  document.getElementById("catOficial").href = urlOf;
-  document.getElementById("catStrip").innerHTML = `<button class="chip ${flt.cat?"":"on"}" data-c="">Todas</button>` + CATS.map(x=>`<button class="chip ${x.name===flt.cat?"on":""}" data-c="${x.name}"><img src="${x.img}" alt=""><span>${x.name}</span></button>`).join("");
+    document.getElementById("catStrip").innerHTML = `<button class="chip ${flt.cat?"":"on"}" data-c="">Todas</button>` + CATS.map(x=>`<button class="chip ${x.name===flt.cat?"on":""}" data-c="${x.name}"><img src="${x.img}" alt=""><span>${x.name}</span></button>`).join("");
   const base = Object.keys(P).filter(k => enCategoria(P[k], flt.cat));
   document.getElementById("fCats").innerHTML = [{name:"",label:"Todas"}].concat(CATS.map(x=>({name:x.name,label:x.name}))).map(x=>{
     const n = Object.values(P).filter(p=>enCategoria(p,x.name)).length;
@@ -1297,7 +1295,7 @@ function pintarCategorias(){
   if(!lista.length){
     vacio.innerHTML = base.length
       ? '<b>No hay productos con esos filtros.</b><p>Probá quitando algún filtro.</p>'
-      : '<b>Aún no hay productos de esta categoría en la demo.</b><p>Podés verlos en la tienda oficial.</p><a class="btn p" href="'+urlOf+'" target="_blank" rel="noopener">Ver en mundiofertas.net →</a>';
+      : '<b>Aún no hay productos de esta categoría en la demo.</b><p>Probá con otra categoría.</p>';
   }
 }
 (() => {
