@@ -57,3 +57,5 @@ footer.site{padding:36px 0 22px}
 .hx-values ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}.hx-values li{font-weight:600;font-size:14px;color:#164D70}.hx-values li span{color:#289BD0;font-size:11px;margin-right:9px}
 @media(max-width:900px){.hx-top,.hx-values{grid-template-columns:1fr}.hx-list{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.hx-list{grid-template-columns:1fr}.hx-intro{padding:22px}}
+
+.hx-back{display:inline-block;margin:0 0 14px;font-size:12px;font-weight:700;color:#087AAF}#historiaVista .hx{padding-top:30px;min-height:60vh}
