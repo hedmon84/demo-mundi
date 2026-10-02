@@ -37,3 +37,5 @@ footer.site{padding:36px 0 22px}
 .product-slider>.slider-arrow[data-track=gridOfertas]{display:none!important}
 @media(max-width:900px){#gridOfertas.product-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){#gridOfertas.product-track{grid-template-columns:1fr}}
+
+.catalog-expand,#catalogoCompleto,details.extra-department#negocio{display:none!important}
