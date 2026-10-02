@@ -39,3 +39,21 @@ footer.site{padding:36px 0 22px}
 @media(max-width:600px){#gridOfertas.product-track{grid-template-columns:1fr}}
 
 .catalog-expand,#catalogoCompleto,details.extra-department#negocio{display:none!important}
+
+/* Historia section (inline) */
+.hx{scroll-margin-top:170px;padding:20px 0 34px}
+.hx-top{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch;margin-bottom:22px}
+.hx-intro{background:linear-gradient(120deg,#F2FAFF,#E1F4FE);border-radius:16px;padding:30px 34px}
+.hx-intro h2{font-size:clamp(26px,3vw,38px);line-height:1.08;margin:0 0 14px}.hx-intro h2 span{color:#218ABF}
+.hx-intro p{margin:0;color:#4E738B;font-size:15px;max-width:62ch}
+.hx-year{background:#fff;border:1px solid #D9ECF7;border-radius:16px;padding:24px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.hx-year span{font-size:10px;letter-spacing:.15em;color:#557081}.hx-year strong{font-size:68px;line-height:1.1;letter-spacing:-.05em;color:#289BD0;font-family:Archivo,sans-serif}.hx-year p{margin:6px 0 0;font-size:14px;color:#164D70}
+.hx-list{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.hx-list li{background:#F5FBFF;border:1px solid #E1EFF8;border-radius:14px;padding:18px}
+.hx-date{font-family:Archivo,sans-serif;font-size:34px;font-weight:800;color:#248DC2;line-height:1.1}.hx-date span{display:block;font-family:Figtree,sans-serif;font-size:9px;letter-spacing:.12em;color:#557081;margin:6px 0 12px}
+.hx-list h4{margin:0 0 8px;font-size:16px;color:#164D70}.hx-list p{margin:0;font-size:13px;color:#4E738B;line-height:1.5}
+.hx-values{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;border:1px solid #D9ECF7;border-radius:16px;padding:24px 30px}
+.hx-values h4{font-size:20px;margin:0 0 8px;color:#164D70}.hx-values p{margin:0;font-size:14px;color:#4E738B}
+.hx-values ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}.hx-values li{font-weight:600;font-size:14px;color:#164D70}.hx-values li span{color:#289BD0;font-size:11px;margin-right:9px}
+@media(max-width:900px){.hx-top,.hx-values{grid-template-columns:1fr}.hx-list{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.hx-list{grid-template-columns:1fr}.hx-intro{padding:22px}}
