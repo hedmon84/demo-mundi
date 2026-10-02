@@ -660,7 +660,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <li><a href="#">WhatsApp 3267-7622</a></li></ul></div>
 <div class="legal">Mundiofertas, S.A. © 2026 · Todos los derechos reservados · Página de prueba</div>
 <div class="demobar">Página de prueba — Mundiofertas · Los precios y productos son reales del catálogo actual. Es una demostración navegable, no la tienda en producción.</div></div></footer>
-<a class="wafloat" href="#" onclick="aviso('WhatsApp: +504 3267-7622');return false">💬 <span>Escribinos por WhatsApp</span></a>
+<a class="wafloat" href="#" onclick="aviso('WhatsApp: +504 3267-7622');return false"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#1f9d55" d="M16 6.500a9.400 9.400 0 0 0-8 14.300L6.600 25.400l4.800-1.300A9.400 9.400 0 1 0 16 6.500zm5.300 13.100c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"/></svg><span>Escribinos<br>por WhatsApp</span></a>
 <div class="toast" id="toast"></div>
 <script>
 /* ===================== CATÁLOGO DE PRUEBA ===================== */
@@ -755,7 +755,7 @@ function tarjeta(k){
         <span class="csave">Ahorrás ${L(ahorro)}</span>
         <span class="cuota">${cuota(p.p,m)}</span>
         <div class="cstock"><i></i>${p.stock}</div>
-        <button class="cadd" onclick="agregar('${k}',this)">Agregar al carrito</button>
+        <button class="cadd" onclick="agregar('${k}',this)"><svg class="cart-ic" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM1 2v2h2l3.6 7.6-1.4 2.4A2 2 0 0 0 7 17h12v-2H7.400l1.100-2h7.500a2 2 0 0 0 1.700-1l3.600-6.500A1 1 0 0 0 20.400 4H5.200l-.9-2H1z"/></svg>Agregar al carrito</button>
       </div>
     </div></article>`;
 }
@@ -785,8 +785,8 @@ function agregar(k, btn){
   const linea = cart.find(x => x.k === k);
   if(linea) linea.q++; else cart.push({k:k, q:1});
   pintarCarrito();
-  if(btn){ const o = btn.textContent; btn.textContent = "✓ Agregado"; btn.classList.add("done");
-    setTimeout(()=>{ btn.textContent = o; btn.classList.remove("done"); }, 1600); }
+  if(btn){ const o = btn.innerHTML; btn.textContent = "✓ Agregado"; btn.classList.add("done");
+    setTimeout(()=>{ btn.innerHTML = o; btn.classList.remove("done"); }, 1600); }
   aviso(P[k].n + " agregado al carrito");
 }
 const nItems    = () => cart.reduce((a,x) => a + x.q, 0);

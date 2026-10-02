@@ -25,3 +25,7 @@ footer.site{padding:36px 0 22px}
 }
 
 .location-card{display:grid;grid-template-columns:120px 34px 1fr;align-items:center;gap:14px;padding:10px 18px 10px 10px}.location-photo{width:120px;height:78px;object-fit:cover;border-radius:10px;display:block}
+
+.cadd{display:flex;align-items:center;justify-content:center;gap:9px;border-radius:6px}.cadd .cart-ic{flex:none}
+.wafloat{background:#2E9E58!important;border-radius:14px!important;padding:8px 18px 8px 12px!important;gap:10px!important;font-size:12px!important;line-height:1.2;box-shadow:0 6px 18px #2E9E5840!important}.wafloat span{font-weight:700;text-align:left}
+@media(max-width:560px){.wafloat span{display:none}.wafloat{padding:10px!important;border-radius:50%!important}}
