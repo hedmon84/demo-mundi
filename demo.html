@@ -530,7 +530,7 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <section class="blk" id="ofertas"><div class="in">
 <div class="bhead">
 <div><h3>Ofertas de la semana</h3><p>Encontrá tu próximo favorito para la casa</p></div>
-<a href="#ofertas">Deslizá para ver más →</a>
+<a href="#ofertas">Ver todas las ofertas →</a>
 </div>
 <div class="product-slider"><button aria-label="Ofertas anteriores" class="slider-arrow prev" data-dir="-1" data-track="gridOfertas">‹</button><div aria-label="Productos en oferta" class="grid product-track" id="gridOfertas" tabindex="0"></div><button aria-label="Más ofertas" class="slider-arrow next" data-dir="1" data-track="gridOfertas">›</button></div>
 </div></section>
@@ -560,9 +560,9 @@ table.sp tr:nth-child(odd) td{background:#FAFCFD}
 <div class="locations-layout">
 <div class="map-panel"><div aria-label="Mapa de tiendas Mundi Ofertas en Cortés" id="storeMap" role="region"><p class="map-fallback">Cargando mapa… También podés usar los enlaces de cada tienda.</p></div><div class="map-caption"><span class="demo-map-label">MAPA DEMO</span><span>Villanueva y Choloma: puntos de referencia aproximados.</span></div></div>
 <div class="location-cards">
-<article class="location-card"><span aria-hidden="true" class="location-icon">⌖</span><div><button class="store-focus" data-store="villanueva">Villanueva</button><p>Sobre el boulevard principal de la CA-5, a la par de Popeyes y Autorepuestos.</p><a href="https://maps.app.goo.gl/5xutEbXc8fwufgaG9?g_st=aw" rel="noopener noreferrer" target="_blank">Cómo llegar ↗</a></div></article>
-<article class="location-card"><span aria-hidden="true" class="location-icon">⌖</span><div><button class="store-focus" data-store="sps">San Pedro Sula</button><p>Bo. El Benque, 7 calle y 8 avenida, a una cuadra del Hospital Leonardo Martínez.</p><a href="https://goo.gl/maps/nLYeeZ4ikxT9iuoH6" rel="noopener noreferrer" target="_blank">Cómo llegar ↗</a></div></article>
-<article class="location-card"><span aria-hidden="true" class="location-icon">⌖</span><div><button class="store-focus" data-store="choloma">Choloma</button><p>Boulevard hacia Puerto Cortés, atrás de Popeyes.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Mundiofertas+Choloma+Honduras" rel="noopener noreferrer" target="_blank">Buscar ubicación ↗</a></div></article>
+<article class="location-card"><img class="location-photo" src="assets/store1.jpg" alt="Fachada de la tienda de San Pedro Sula (imagen de ejemplo)" loading="lazy"><span aria-hidden="true" class="location-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="#0A7BB8"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></span><div><button class="store-focus" data-store="sps">San Pedro Sula</button><p>Bo. El Benque, 7 calle y 8 avenida, a una cuadra del Hospital Leonardo Martínez.</p><a href="https://goo.gl/maps/nLYeeZ4ikxT9iuoH6" rel="noopener noreferrer" target="_blank">Cómo llegar ↗</a></div></article>
+<article class="location-card"><img class="location-photo" src="assets/store2.jpg" alt="Fachada de la tienda de Villanueva (imagen de ejemplo)" loading="lazy"><span aria-hidden="true" class="location-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="#0A7BB8"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></span><div><button class="store-focus" data-store="villanueva">Villanueva</button><p>Sobre el boulevard principal de la CA-5, a la par de Popeyes y Autorepuestos.</p><a href="https://maps.app.goo.gl/5xutEbXc8fwufgaG9?g_st=aw" rel="noopener noreferrer" target="_blank">Cómo llegar ↗</a></div></article>
+<article class="location-card"><img class="location-photo" src="assets/store3.jpg" alt="Fachada de la tienda de Choloma (imagen de ejemplo)" loading="lazy"><span aria-hidden="true" class="location-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="#0A7BB8"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></span><div><button class="store-focus" data-store="choloma">Choloma</button><p>Boulevard hacia Puerto Cortés, atrás de Popeyes.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Mundiofertas+Choloma+Honduras" rel="noopener noreferrer" target="_blank">Buscar ubicación ↗</a></div></article>
 </div>
 </div>
 </div></section>
@@ -714,7 +714,7 @@ const P = {
 const BASE = "https://www.mundiofertas.net/archivos/multimedia/Productos/";
 const img = k => BASE + P[k].img;
 const L = n => "L " + n.toLocaleString("es-HN");
-const cuota = (p,m) => "o " + m + " cuotas de " + L(Math.round(p/m));
+const cuota = (p,m) => m + " cuotas de " + L(Math.round(p/m));
 
 /* ===================== ESTADO ===================== */
 let cart = [], favs = 0, popMostrado = false;
@@ -741,7 +741,7 @@ function tarjeta(k){
   const p = P[k], ahorro = p.w - p.p, m = p.p > 20000 ? 18 : 12;
   const sello = p.cond === "semi"
     ? '<span class="badge semi">Americano revisado</span>'
-    : '<span class="badge nuevo">Nuevo</span>';
+    : '<span class="badge nuevo">Nuevo</span><span class="badge off">-' + Math.round(ahorro / p.w * 100) + '%</span>';
   return `<article class="card">
     ${sello}
     <button class="fav" aria-label="Agregar a favoritos" onclick="favear(this)">♡</button>
